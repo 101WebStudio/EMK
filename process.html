@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process - EMK Event Management Kosovo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0A2463;
+            --primary-dark: #071845;
+            --secondary-color: #3E92CC;
+            --secondary-light: #5CA8E0;
+            --accent-color: #FF6B6B;
+            --accent-light: #FF8585;
+            --light-color: #F8F9FA;
+            --light-gray: #F0F2F5;
+            --dark-color: #212529;
+            --gray-color: #6C757D;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --border-radius: 10px;
+            --section-spacing: 100px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: var(--section-spacing) 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+            color: var(--gray-color);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 35px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(10, 36, 99, 0.2);
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(10, 36, 99, 0.3);
+        }
+        
+        .btn i {
+            font-size: 1rem;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .btn-accent:hover {
+            background-color: var(--accent-light);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(62, 146, 204, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-light);
+            box-shadow: 0 10px 25px rgba(62, 146, 204, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            box-shadow: none;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 5px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-right: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .logo:hover .logo-icon {
+            transform: rotate(-5deg) scale(1.05);
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.1;
+        }
+        
+        .logo-text span {
+            color: var(--accent-color);
+            display: block;
+            font-weight: 600;
+            font-size: 1.6rem;
+            margin-top: 3px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 1.05rem;
+            padding: 8px 0;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 1px;
+        }
+        
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-btn:hover {
+            background-color: var(--light-gray);
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(rgba(10, 36, 99, 0.88), rgba(10, 36, 99, 0.92)), url('https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero:before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%);
+            top: 10%;
+            right: 10%;
+            border-radius: 50%;
+        }
+        
+        .page-hero:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(62, 146, 204, 0.15) 0%, transparent 70%);
+            bottom: 20%;
+            left: 5%;
+            border-radius: 50%;
+        }
+        
+        .page-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .page-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .breadcrumb {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+            opacity: 1;
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+        
+        /* Process Timeline */
+        .process-timeline {
+            position: relative;
+            margin-top: 60px;
+        }
+        
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            z-index: 1;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 100px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding: 40px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-hover);
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 60px;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 60px;
+            text-align: left;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            box-shadow: var(--shadow);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            transition: var(--transition);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            right: -40px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -40px;
+        }
+        
+        .timeline-content:hover .timeline-icon {
+            transform: translateY(-50%) scale(1.1);
+            background: linear-gradient(135deg, var(--accent-color), #ff5252);
+        }
+        
+        .timeline-number {
+            position: absolute;
+            top: -20px;
+            font-size: 6rem;
+            font-weight: 800;
+            color: rgba(10, 36, 99, 0.05);
+            z-index: 0;
+            line-height: 1;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-number {
+            right: 20px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-number {
+            left: 20px;
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .timeline-features {
+            margin-top: 25px;
+        }
+        
+        .timeline-features li {
+            list-style: none;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-features li {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-features li i {
+            color: var(--accent-color);
+            font-size: 1rem;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-features li i {
+            margin-left: 15px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-features li i {
+            margin-right: 15px;
+        }
+        
+        /* Process Cards */
+        .process-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+        
+        .process-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .process-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .process-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+        }
+        
+        .process-card-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, rgba(62, 146, 204, 0.1), rgba(10, 36, 99, 0.1));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            transition: var(--transition);
+        }
+        
+        .process-card:hover .process-card-icon {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .process-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        /* Case Studies */
+        .case-studies {
+            background-color: var(--light-color);
+        }
+        
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .case-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .case-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .case-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .case-card:hover .case-img img {
+            transform: scale(1.05);
+        }
+        
+        .case-content {
+            padding: 40px;
+        }
+        
+        .case-tag {
+            display: inline-block;
+            background-color: rgba(62, 146, 204, 0.1);
+            color: var(--secondary-color);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .case-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+        
+        .case-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .case-stat {
+            text-align: center;
+        }
+        
+        .case-stat h4 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .case-stat p {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background-color: white;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .faq-question h3 {
+            color: var(--primary-color);
+            margin-bottom: 0;
+            font-size: 1.3rem;
+        }
+        
+        .faq-toggle {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 30px 25px;
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.8rem;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+            border-radius: 1.5px;
+        }
+        
+        .footer-links li {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+        
+        .footer-links a i {
+            font-size: 0.8rem;
+        }
+        
+        .contact-info li {
+            list-style: none;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .process-timeline::before {
+                left: 40px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+            }
+            
+            .timeline-content {
+                margin-left: 100px !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: -40px;
+                right: auto;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-number,
+            .timeline-item:nth-child(even) .timeline-number {
+                left: 20px;
+                right: auto;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-features li,
+            .timeline-item:nth-child(even) .timeline-features li {
+                flex-direction: row;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-features li i,
+            .timeline-item:nth-child(even) .timeline-features li i {
+                margin-right: 15px;
+                margin-left: 0;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            :root {
+                --section-spacing: 80px;
+            }
+            
+            .page-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .page-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+            
+            .cta-content h2 {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 100px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background-color: white;
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                transition: var(--transition);
+                z-index: 999;
+                border-radius: 0 0 20px 20px;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 0 0 25px 0;
+            }
+            
+            .page-hero {
+                padding: 180px 0 100px;
+                margin-top: 90px;
+                background-attachment: scroll;
+            }
+            
+            .page-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .process-timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-content {
+                margin-left: 80px !important;
+                padding: 30px;
+            }
+            
+            .timeline-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: -30px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .logo-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2.5rem;
+            }
+            
+            .logo-text {
+                font-size: 2rem;
+            }
+            
+            .logo-text span {
+                font-size: 1.4rem;
+            }
+            
+            .case-grid,
+            .process-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            :root {
+                --section-spacing: 60px;
+            }
+            
+            .page-hero h1 {
+                font-size: 1.9rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.7rem;
+            }
+            
+            .btn {
+                padding: 14px 25px;
+                font-size: 1rem;
+            }
+            
+            .logo-icon {
+                width: 65px;
+                height: 65px;
+                font-size: 2.2rem;
+                margin-right: 12px;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
+            }
+            
+            .logo-text span {
+                font-size: 1.2rem;
+            }
+            
+            .timeline-content {
+                padding: 25px;
+            }
+            
+            .timeline-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+            
+            .cta-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .page-hero h1 {
+                font-size: 1.7rem;
+            }
+            
+            .process-timeline::before {
+                display: none;
+            }
+            
+            .timeline-content {
+                margin-left: 0 !important;
+            }
+            
+            .timeline-icon {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">EMK</div>
+                <div class="logo-text">Event Management<span>Kosovo</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="services.html" target="_blank">Services</a></li>
+                    <li><a href="about.html" target="_blank">About Us</a></li>
+                    <li><a href="process.html" class="active" target="_blank">Our Process</a></li>
+                    <li><a href="index.html"  class="btn btn-accent" target="_blank" >Contact Us <i class="fas fa-arrow-right"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>></span> <span>Our Process</span>
+            </div>
+            <h1>Our Strategic Event Process</h1>
+            <p>A systematic approach to delivering exceptional events that drive measurable business results</p>
+        </div>
+    </section>
+
+    <!-- Process Overview -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>The EMK 4-Step Process</h2>
+                <p>Our proven methodology ensures every event is strategically planned, flawlessly executed, and delivers maximum ROI</p>
+            </div>
+            
+            <!-- Process Timeline -->
+            <div class="process-timeline">
+                <!-- Step 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">01</div>
+                        <h3>Discovery & Strategy Development</h3>
+                        <p>We begin by understanding your business objectives, target audience, and desired outcomes to create a comprehensive event strategy that aligns with your organizational goals.</p>
+                        
+                        <div class="timeline-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> <span><strong>Initial Consultation:</strong> Deep dive into your objectives and requirements</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Audience Analysis:</strong> Understanding attendee demographics and preferences</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Goal Setting:</strong> Defining measurable event success metrics</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Budget Planning:</strong> Creating a transparent financial framework</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Timeline Development:</strong> Establishing key milestones and deadlines</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-top: 30px;">
+                            <span class="case-tag">Duration: 2-4 Weeks</span>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">02</div>
+                        <h3>Concept & Design Phase</h3>
+                        <p>Our creative team develops a unique event concept tailored to your specific requirements, audience, and brand identity, ensuring a memorable and impactful experience.</p>
+                        
+                        <div class="timeline-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> <span><strong>Creative Concepting:</strong> Developing the event theme and narrative</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Brand Integration:</strong> Seamlessly incorporating your brand identity</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Venue Selection:</strong> Sourcing and securing the perfect location</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Program Design:</strong> Creating engaging agendas and content flow</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Vendor Coordination:</strong> Selecting and contracting premium suppliers</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-top: 30px;">
+                            <span class="case-tag">Duration: 3-6 Weeks</span>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">03</div>
+                        <h3>Planning & Coordination</h3>
+                        <p>Meticulous planning of every detail, from logistics and technology setup to speaker coordination and attendee management, ensuring seamless execution.</p>
+                        
+                        <div class="timeline-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> <span><strong>Detailed Planning:</strong> Comprehensive checklist development</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Logistics Management:</strong> Transportation, accommodation, and setup</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Technology Setup:</strong> Audio-visual, registration, and engagement tools</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Speaker Management:</strong> Sourcing, contracting, and briefing presenters</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Marketing & Promotion:</strong> Driving attendance and engagement</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-top: 30px;">
+                            <span class="case-tag">Duration: 4-12 Weeks</span>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-number">04</div>
+                        <h3>Execution & Post-Event Analysis</h3>
+                        <p>On-site management ensuring flawless execution, followed by comprehensive analysis to measure ROI and gather insights for future improvements.</p>
+                        
+                        <div class="timeline-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> <span><strong>On-Site Management:</strong> Real-time coordination and problem-solving</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Attendant Experience:</strong> Ensuring seamless attendee journey</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Real-time Adjustments:</strong> Adapting to changing circumstances</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>ROI Measurement:</strong> Analyzing event success against objectives</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Feedback Collection:</strong> Gathering insights for continuous improvement</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-top: 30px;">
+                            <span class="case-tag">Duration: 2-4 Weeks Post-Event</span>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Process Elements -->
+    <section style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Elements of Our Process</h2>
+                <p>What sets our approach apart from traditional event planning</p>
+            </div>
+            
+            <div class="process-cards">
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Strategic Alignment</h3>
+                    <p>Every event is designed with clear business objectives and measurable outcomes in mind, ensuring alignment with your broader organizational goals.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaborative Approach</h3>
+                    <p>We work as an extension of your team, maintaining open communication and collaboration throughout the entire process.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Data-Driven Decisions</h3>
+                    <p>We leverage analytics and insights to make informed decisions, optimize experiences, and maximize ROI.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk Management</h3>
+                    <p>Comprehensive contingency planning and risk assessment ensure we're prepared for any scenario.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Continuous Improvement</h3>
+                    <p>We learn from every event, implementing feedback and insights to continuously enhance our processes and your results.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability Focus</h3>
+                    <p>We incorporate eco-friendly practices and sustainable solutions into every aspect of event planning and execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Real results achieved through our strategic process</p>
+            </div>
+            
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-img">
+                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Kosovo Tech Summit">
+                    </div>
+                    <div class="case-content">
+                        <span class="case-tag">Technology Conference</span>
+                        <h3>Kosovo Tech Summit 2023</h3>
+                        <p>A 3-day technology conference bringing together 500+ industry leaders, startups, and investors from across the Balkan region.</p>
+                        
+                        <div class="case-stats">
+                            <div class="case-stat">
+                                <h4>92%</h4>
+                                <p>Attendee Satisfaction</p>
+                            </div>
+                            <div class="case-stat">
+                                <h4>45+</h4>
+                                <p>Partnerships Formed</p>
+                            </div>
+                            <div class="case-stat">
+                                <h4>280%</h4>
+                                <p>ROI Achieved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-img">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Executive Networking">
+                    </div>
+                    <div class="case-content">
+                        <span class="case-tag">Executive Networking</span>
+                        <h3>Balkan Business Leaders Forum</h3>
+                        <p>An exclusive networking event connecting 150+ C-level executives from Kosovo, Albania, North Macedonia, and Montenegro.</p>
+                        
+                        <div class="case-stats">
+                            <div class="case-stat">
+                                <h4>85%</h4>
+                                <p>New Connections</p>
+                            </div>
+                            <div class="case-stat">
+                                <h4>€2.3M</h4>
+                                <p>Deals Facilitated</p>
+                            </div>
+                            <div class="case-stat">
+                                <h4>97%</h4>
+                                <p>Would Attend Again</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-img">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Product Launch">
+                    </div>
+                    <div class="case-content">
+                        <span class="case-tag">Product Launch</span>
+                        <h3>Innovate Kosovo Product Reveal</h3>
+                        <p>A multi-sensory product launch event for a leading tech company's new innovation platform, reaching 300+ media and industry influencers.</p>
+                        
+                        <div class="case-stats">
+                            <div class="case-stat">
+                                <h4>150%</h4>
+                                <p>Media Coverage</p>
+                            </div>
+                            <div class="case-stat">
+                                <h4>3.2K</h4>
+                                <p>Social Media Reach</p>
+                            </div>
+                            <div class="case-stat">
+                                <h4>€850K</h4>
+                                <p>Pre-orders Generated</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Answers to common questions about our event management process</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does your event planning process typically take?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline varies depending on the complexity and scale of the event. Generally, we recommend:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Small corporate events (50-100 attendees): 2-3 months</li>
+                            <li>Medium conferences (100-300 attendees): 3-6 months</li>
+                            <li>Large-scale events (300+ attendees): 6-12 months</li>
+                        </ul>
+                        <p>We begin with a discovery phase to establish the exact timeline based on your specific requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is your approach to budget management?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We employ a transparent and strategic approach to budget management:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Comprehensive Budget Planning:</strong> We create detailed budget breakdowns during the discovery phase</li>
+                            <li><strong>Vendor Negotiation:</strong> We leverage our network to secure competitive pricing</li>
+                            <li><strong>Regular Updates:</strong> You receive monthly budget reports and alerts for any variances</li>
+                            <li><strong>Contingency Planning:</strong> We allocate 10-15% of the budget for unexpected expenses</li>
+                            <li><strong>ROI Focus:</strong> Every expense is evaluated against its potential return</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you measure event success and ROI?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use a comprehensive measurement framework that includes both quantitative and qualitative metrics:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Pre-defined KPIs:</strong> Established during the strategy phase</li>
+                            <li><strong>Attendee Feedback:</strong> Post-event surveys and interviews</li>
+                            <li><strong>Business Outcomes:</strong> Lead generation, partnerships formed, deals closed</li>
+                            <li><strong>Engagement Metrics:</strong> Session attendance, networking connections, app usage</li>
+                            <li><strong>Media & Social Impact:</strong> Coverage, reach, and sentiment analysis</li>
+                        </ul>
+                        <p>We provide a detailed post-event report with actionable insights for future improvement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What technology do you use for event management?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We leverage a suite of industry-leading technologies to enhance every aspect of event management:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Registration & Ticketing:</strong> Custom-built platforms and integration with leading providers</li>
+                            <li><strong>Event Apps:</strong> Custom mobile applications for agenda, networking, and engagement</li>
+                            <li><strong>Hybrid Event Technology:</strong> Professional streaming, virtual stages, and interactive features</li>
+                            <li><strong>Networking Tools:</strong> AI-powered matchmaking and connection facilitation</li>
+                            <li><strong>Analytics Platforms:</strong> Real-time dashboards and post-event analysis tools</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do you handle last-minute changes or emergencies?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our comprehensive risk management and contingency planning ensures we're prepared for any scenario:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Dedicated Crisis Team:</strong> Experienced professionals on standby throughout the event</li>
+                            <li><strong>Backup Plans:</strong> Alternative venues, speakers, and suppliers identified in advance</li>
+                            <li><strong>Real-time Communication:</strong> Rapid response protocols and communication channels</li>
+                            <li><strong>Insurance Coverage:</strong> Comprehensive event insurance for all contingencies</li>
+                            <li><strong>Vendor Relationships:</strong> Strong partnerships that enable quick solutions</li>
+                        </ul>
+                        <p>We've successfully managed everything from weather disruptions to speaker cancellations with minimal impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience Our Proven Process?</h2>
+                <p>Let us transform your next corporate event into a strategic success story. Our systematic approach ensures exceptional results every time.</p>
+                <a href="#contact" class="btn btn-accent" style="font-size: 1.1rem; padding: 18px 45px;">Start Your Event Journey <i class="fas fa-calendar-check"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EMK Event Management</h3>
+                    <div style="margin-bottom: 25px;">
+                        <div class="logo" style="margin-bottom: 20px;">
+                            <div class="logo-icon" style="width: 60px; height: 60px; font-size: 1.8rem; margin-right: 12px;">EMK</div>
+                            <div class="logo-text" style="font-size: 1.6rem; color: white;">Event Management<span style="color: #ddd;">Kosovo</span></div>
+                        </div>
+                        <p style="color: #bbb; margin-top: 15px;">Your premier partner for strategic corporate events and executive networking in Kosovo and the Balkan region.</p>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="process.html"><i class="fas fa-chevron-right"></i> Our Process</a></li>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Prishtina, Kosovo<br>Business District, Floor 5</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+383 44 123 456<br>+383 38 654 321</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>101webstudio@gmail.com<br>contact@emk-kosovo.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 2:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EMK - Event Management Kosovo. All rights reserved. | Professional Event Solutions</p>
+                <p style="margin-top: 10px;">Website crafted with <i class="fas fa-heart" style="color: var(--accent-color);"></i> for exceptional event experiences</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav ul').classList.remove('active');
+                const icon = document.querySelector('.mobile-menu-btn i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                
+                // Update active nav link
+                document.querySelectorAll('nav ul li a').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#') && this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+                
+                const toggleIcon = this.querySelector('.faq-toggle i');
+                if (faqItem.classList.contains('active')) {
+                    toggleIcon.classList.remove('fa-plus');
+                    toggleIcon.classList.add('fa-minus');
+                } else {
+                    toggleIcon.classList.remove('fa-minus');
+                    toggleIcon.classList.add('fa-plus');
+                }
+            });
+        });
+        
+        // Add animation to timeline items on scroll
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 300);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(50px)';
+            item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            timelineObserver.observe(item);
+        });
+        
+        // Add animation to process cards on scroll
+        const processObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 200);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.process-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            processObserver.observe(card);
+        });
+        
+        // Add animation to case studies on scroll
+        const caseObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 200);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.case-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            caseObserver.observe(card);
+        });
+        
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.querySelector('.copyright p');
+            if (yearSpan) {
+                const currentYear = new Date().getFullYear();
+                yearSpan.innerHTML = yearSpan.innerHTML.replace('2023', currentYear);
+            }
+        });
+    </script>
+</body>
+</html>

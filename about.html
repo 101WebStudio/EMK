@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EMK Event Management Kosovo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0A2463;
+            --primary-dark: #071845;
+            --secondary-color: #3E92CC;
+            --secondary-light: #5CA8E0;
+            --accent-color: #FF6B6B;
+            --accent-light: #FF8585;
+            --light-color: #F8F9FA;
+            --light-gray: #F0F2F5;
+            --dark-color: #212529;
+            --gray-color: #6C757D;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --border-radius: 10px;
+            --section-spacing: 100px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: var(--section-spacing) 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+            color: var(--gray-color);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 35px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(10, 36, 99, 0.2);
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(10, 36, 99, 0.3);
+        }
+        
+        .btn i {
+            font-size: 1rem;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .btn-accent:hover {
+            background-color: var(--accent-light);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(62, 146, 204, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-light);
+            box-shadow: 0 10px 25px rgba(62, 146, 204, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            box-shadow: none;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 5px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-right: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .logo:hover .logo-icon {
+            transform: rotate(-5deg) scale(1.05);
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.1;
+        }
+        
+        .logo-text span {
+            color: var(--accent-color);
+            display: block;
+            font-weight: 600;
+            font-size: 1.6rem;
+            margin-top: 3px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 1.05rem;
+            padding: 8px 0;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 1px;
+        }
+        
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-btn:hover {
+            background-color: var(--light-gray);
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(rgba(10, 36, 99, 0.88), rgba(10, 36, 99, 0.92)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero:before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%);
+            top: 10%;
+            right: 10%;
+            border-radius: 50%;
+        }
+        
+        .page-hero:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(62, 146, 204, 0.15) 0%, transparent 70%);
+            bottom: 20%;
+            left: 5%;
+            border-radius: 50%;
+        }
+        
+        .page-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .page-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .breadcrumb {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+            opacity: 1;
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+        
+        /* About Content */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+        
+        .about-features {
+            margin: 30px 0;
+        }
+        
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .about-feature i {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-badge {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--accent-color), #ff5252);
+            color: white;
+            padding: 15px 25px;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+        }
+        
+        /* Mission & Vision */
+        .mission-vision {
+            background-color: var(--light-color);
+        }
+        
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .mv-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        .mv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .mv-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(62, 146, 204, 0.1), rgba(10, 36, 99, 0.1));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            transition: var(--transition);
+        }
+        
+        .mv-card:hover .mv-icon {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .mv-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .member-img {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .team-member:hover .member-img img {
+            transform: scale(1.05);
+        }
+        
+        .member-info {
+            padding: 30px;
+        }
+        
+        .member-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .member-position {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .member-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-gray);
+            border-radius: 50%;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .member-social a:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 40px 30px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .value-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(62, 146, 204, 0.1), rgba(255, 107, 107, 0.1));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--accent-color);
+            font-size: 2rem;
+        }
+        
+        .value-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats:before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
+        }
+        
+        .stats:after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
+            border-radius: 50%;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stat-item h3 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+            border-radius: 1.5px;
+        }
+        
+        .footer-links li {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+        
+        .footer-links a i {
+            font-size: 0.8rem;
+        }
+        
+        .contact-info li {
+            list-style: none;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .process-steps:before {
+                width: 70%;
+                left: 15%;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            :root {
+                --section-spacing: 80px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .page-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .page-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 100px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background-color: white;
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                transition: var(--transition);
+                z-index: 999;
+                border-radius: 0 0 20px 20px;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 0 0 25px 0;
+            }
+            
+            .page-hero {
+                padding: 180px 0 100px;
+                margin-top: 90px;
+                background-attachment: scroll;
+            }
+            
+            .page-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .team-grid,
+            .mv-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .logo-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2.5rem;
+            }
+            
+            .logo-text {
+                font-size: 2rem;
+            }
+            
+            .logo-text span {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            :root {
+                --section-spacing: 60px;
+            }
+            
+            .page-hero h1 {
+                font-size: 1.9rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.7rem;
+            }
+            
+            .btn {
+                padding: 14px 25px;
+                font-size: 1rem;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.8rem;
+            }
+            
+            .logo-icon {
+                width: 65px;
+                height: 65px;
+                font-size: 2.2rem;
+                margin-right: 12px;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
+            }
+            
+            .logo-text span {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .page-hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">EMK</div>
+                <div class="logo-text">Event Management<span>Kosovo</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="services.html" target="_blank">Services</a></li>
+                    <li><a href="about.html" class="active" target="_blank">About Us</a></li>
+                    <li><a href="process.html" target="_blank">Our Process</a></li>
+                    <li><a href="index.html" class="btn btn-accent" target="_blank">Contact Us <i class="fas fa-arrow-right"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>></span> <span>About Us</span>
+            </div>
+            <h1>About EMK Event Management Kosovo</h1>
+            <p>Your trusted partner in professional event management since 2016</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Redefining Corporate Gatherings in Kosovo</h2>
+                    <p>EMK - Event Management Kosovo has established itself as the premier corporate event specialist in the region. With a deep understanding of the local and international business landscape, we create events that facilitate meaningful connections and drive organizational growth.</p>
+                    <p>Founded in 2016 by a team of passionate event professionals, EMK has grown to become Kosovo's leading event management company, specializing in corporate events, executive networking, and strategic business gatherings.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Strategic Approach</h4>
+                                <p>Every event is designed with clear business objectives and measurable outcomes in mind.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Local Expertise</h4>
+                                <p>Deep understanding of Kosovo's business culture and networking dynamics.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Global Standards</h4>
+                                <p>International best practices combined with local insights for exceptional results.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn btn-accent">Partner With Us Today <i class="fas fa-handshake"></i></a>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="EMK Team Planning Event">
+                    <div class="about-badge">7+ Years of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mission & Vision</h2>
+                <p>Driving business growth through exceptional event experiences</p>
+            </div>
+            
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To transform business gatherings into strategic platforms for connection, innovation, and growth by delivering exceptional event experiences that exceed expectations and deliver measurable results for our clients.</p>
+                </div>
+                
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading event management partner in the Balkan region, recognized for our innovative approach, strategic expertise, and ability to create meaningful connections that drive business success.</p>
+                </div>
+                
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p>Excellence, Integrity, Innovation, Collaboration, and Client-Centricity guide everything we do, ensuring we deliver exceptional value and build lasting partnerships with our clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>280+</h3>
+                    <p>Events Successfully Managed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Client Satisfaction Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5,200+</h3>
+                    <p>Executives Connected</p>
+                </div>
+                <div class="stat-item">
+                    <h3>120+</h3>
+                    <p>Corporate Partners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Leadership Team</h2>
+                <p>Experienced professionals dedicated to your event success</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Arta Berisha">
+                    </div>
+                    <div class="member-info">
+                        <h3>Arta Berisha</h3>
+                        <div class="member-position">CEO & Founder</div>
+                        <p>With over 15 years in event management, Arta leads EMK with passion and strategic vision.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80" alt="Blerim Gashi">
+                    </div>
+                    <div class="member-info">
+                        <h3>Blerim Gashi</h3>
+                        <div class="member-position">Operations Director</div>
+                        <p>Blerim ensures flawless execution of every event with his meticulous attention to detail.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Liridona Hoxha">
+                    </div>
+                    <div class="member-info">
+                        <h3>Liridona Hoxha</h3>
+                        <div class="member-position">Creative Director</div>
+                        <p>Liridona brings innovation and creativity to every event concept and design.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We strive for perfection in every detail, delivering exceptional quality that exceeds expectations.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We work as partners with our clients, building strong relationships based on trust and mutual success.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We continuously seek new ideas and approaches to create unique and memorable event experiences.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We operate with honesty, transparency, and ethical practices in all our business dealings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EMK Event Management</h3>
+                    <div style="margin-bottom: 25px;">
+                        <div class="logo" style="margin-bottom: 20px;">
+                            <div class="logo-icon" style="width: 60px; height: 60px; font-size: 1.8rem; margin-right: 12px;">EMK</div>
+                            <div class="logo-text" style="font-size: 1.6rem; color: white;">Event Management<span style="color: #ddd;">Kosovo</span></div>
+                        </div>
+                        <p style="color: #bbb; margin-top: 15px;">Your premier partner for strategic corporate events and executive networking in Kosovo and the Balkan region.</p>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="partners.html"><i class="fas fa-chevron-right"></i> Our Partners</a></li>
+                        <li><a href="process.html"><i class="fas fa-chevron-right"></i> Our Process</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Prishtina, Kosovo<br>Business District, Floor 5</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+383 44 123 456<br>+383 38 654 321</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>101webstudio@gmail.com<br>contact@emk-kosovo.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 2:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EMK - Event Management Kosovo. All rights reserved. | Professional Event Solutions</p>
+                <p style="margin-top: 10px;">Website crafted with <i class="fas fa-heart" style="color: var(--accent-color);"></i> for exceptional event experiences</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav ul').classList.remove('active');
+                const icon = document.querySelector('.mobile-menu-btn i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                
+                // Update active nav link
+                document.querySelectorAll('nav ul li a').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#') && this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Animate stats when they come into view
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            const observerOptions = {
+                threshold: 0.5
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const statItems = entry.target.querySelectorAll('.stat-item h3');
+                        statItems.forEach(item => {
+                            const finalValue = item.textContent;
+                            if (finalValue && finalValue.match(/^\d+/)) {
+                                item.textContent = '0';
+                                
+                                let counter = 0;
+                                const increment = parseInt(finalValue) / 30;
+                                
+                                const timer = setInterval(() => {
+                                    counter += increment;
+                                    if (counter >= parseInt(finalValue)) {
+                                        item.textContent = finalValue;
+                                        clearInterval(timer);
+                                    } else {
+                                        item.textContent = Math.floor(counter);
+                                    }
+                                }, 60);
+                            }
+                        });
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            observer.observe(statsSection);
+        }
+        
+        // Add animation to team members on scroll
+        const teamObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 200);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.team-member').forEach(member => {
+            member.style.opacity = '0';
+            member.style.transform = 'translateY(30px)';
+            member.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            teamObserver.observe(member);
+        });
+        
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.querySelector('.copyright p');
+            if (yearSpan) {
+                const currentYear = new Date().getFullYear();
+                yearSpan.innerHTML = yearSpan.innerHTML.replace('2023', currentYear);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Event Journey - EMK Event Management Kosovo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0A2463;
+            --primary-dark: #071845;
+            --secondary-color: #3E92CC;
+            --secondary-light: #5CA8E0;
+            --accent-color: #FF6B6B;
+            --accent-light: #FF8585;
+            --light-color: #F8F9FA;
+            --light-gray: #F0F2F5;
+            --dark-color: #212529;
+            --gray-color: #6C757D;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --border-radius: 10px;
+            --section-spacing: 100px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: var(--section-spacing) 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+            color: var(--gray-color);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 35px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(10, 36, 99, 0.2);
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(10, 36, 99, 0.3);
+        }
+        
+        .btn i {
+            font-size: 1rem;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .btn-accent:hover {
+            background-color: var(--accent-light);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(62, 146, 204, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-light);
+            box-shadow: 0 10px 25px rgba(62, 146, 204, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            box-shadow: none;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 5px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-right: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .logo:hover .logo-icon {
+            transform: rotate(-5deg) scale(1.05);
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.1;
+        }
+        
+        .logo-text span {
+            color: var(--accent-color);
+            display: block;
+            font-weight: 600;
+            font-size: 1.6rem;
+            margin-top: 3px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 1.05rem;
+            padding: 8px 0;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+            border-radius: 1px;
+        }
+        
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu-btn:hover {
+            background-color: var(--light-gray);
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(rgba(10, 36, 99, 0.88), rgba(10, 36, 99, 0.92)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero:before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%);
+            top: 10%;
+            right: 10%;
+            border-radius: 50%;
+        }
+        
+        .page-hero:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(62, 146, 204, 0.15) 0%, transparent 70%);
+            bottom: 20%;
+            left: 5%;
+            border-radius: 50%;
+        }
+        
+        .page-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .page-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .breadcrumb {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+            opacity: 1;
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+        
+        /* Contact Content */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+        
+        .contact-info h2 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+        
+        .contact-details {
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(62, 146, 204, 0.1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+        
+        /* Contact Form */
+        .contact-form-container {
+            background-color: white;
+            padding: 50px 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-hover);
+            position: sticky;
+            top: 150px;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .form-header h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .form-header p {
+            color: var(--gray-color);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e1e5eb;
+            border-radius: var(--border-radius);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: #fcfdfe;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            background-color: white;
+            box-shadow: 0 0 0 4px rgba(62, 146, 204, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .checkbox-group input {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .checkbox-group label {
+            font-weight: normal;
+            line-height: 1.5;
+        }
+        
+        .checkbox-group a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Event Type Cards */
+        .event-type-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 15px;
+        }
+        
+        .event-type-card {
+            border: 2px solid #e1e5eb;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .event-type-card:hover {
+            border-color: var(--secondary-color);
+            background-color: rgba(62, 146, 204, 0.05);
+        }
+        
+        .event-type-card.selected {
+            border-color: var(--accent-color);
+            background-color: rgba(255, 107, 107, 0.05);
+        }
+        
+        .event-type-card i {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .event-type-card.selected i {
+            color: var(--accent-color);
+        }
+        
+        .event-type-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .checkmark {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 25px;
+            height: 25px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .event-type-card.selected .checkmark {
+            opacity: 1;
+        }
+        
+        /* Timeline Progress */
+        .form-timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .form-timeline::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var(--light-gray);
+            top: 15px;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .form-timeline::after {
+            content: '';
+            position: absolute;
+            width: 33.33%;
+            height: 3px;
+            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+            top: 15px;
+            left: 0;
+            z-index: 2;
+            transition: var(--transition);
+        }
+        
+        .form-timeline.step-2::after {
+            width: 66.66%;
+        }
+        
+        .form-timeline.step-3::after {
+            width: 100%;
+        }
+        
+        .timeline-step {
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .step-circle {
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border: 3px solid var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-weight: 700;
+            color: var(--gray-color);
+            transition: var(--transition);
+        }
+        
+        .timeline-step.active .step-circle {
+            border-color: var(--secondary-color);
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .timeline-step.completed .step-circle {
+            border-color: var(--accent-color);
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .timeline-step p {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            font-weight: 600;
+        }
+        
+        .timeline-step.active p {
+            color: var(--primary-color);
+        }
+        
+        /* Form Steps */
+        .form-step {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Form Navigation */
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        /* Map Section */
+        .map-section {
+            margin-top: 100px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .map-container {
+            height: 400px;
+            background-color: var(--light-gray);
+            position: relative;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background-color: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            max-width: 350px;
+        }
+        
+        .map-overlay h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Working Hours */
+        .hours-section {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 50px;
+            margin-top: 80px;
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .hour-item {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .hour-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .hour-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(62, 146, 204, 0.1), rgba(255, 107, 107, 0.1));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+        }
+        
+        .hour-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Success Message */
+        .success-message {
+            text-align: center;
+            padding: 60px 40px;
+            display: none;
+        }
+        
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--accent-color), #ff5252);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 30px;
+        }
+        
+        .success-message h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .success-message p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--gray-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+            border-radius: 1.5px;
+        }
+        
+        .footer-links li {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+        
+        .footer-links a i {
+            font-size: 0.8rem;
+        }
+        
+        .contact-info li {
+            list-style: none;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .form-timeline::after {
+                width: 50%;
+            }
+            
+            .form-timeline.step-2::after {
+                width: 100%;
+            }
+            
+            .form-timeline.step-3::after {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            :root {
+                --section-spacing: 80px;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .page-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .page-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+            
+            .contact-form-container {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 100px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background-color: white;
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                transition: var(--transition);
+                z-index: 999;
+                border-radius: 0 0 20px 20px;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 0 0 25px 0;
+            }
+            
+            .page-hero {
+                padding: 180px 0 100px;
+                margin-top: 90px;
+                background-attachment: scroll;
+            }
+            
+            .page-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .logo-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2.5rem;
+            }
+            
+            .logo-text {
+                font-size: 2rem;
+            }
+            
+            .logo-text span {
+                font-size: 1.4rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .event-type-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .form-timeline::before,
+            .form-timeline::after {
+                display: none;
+            }
+            
+            .form-timeline {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .timeline-step {
+                display: flex;
+                align-items: center;
+                text-align: left;
+            }
+            
+            .step-circle {
+                margin: 0 15px 0 0;
+                flex-shrink: 0;
+            }
+            
+            .map-overlay {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                margin: 30px;
+                max-width: 100%;
+            }
+            
+            .hours-section {
+                padding: 40px 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            :root {
+                --section-spacing: 60px;
+            }
+            
+            .page-hero h1 {
+                font-size: 1.9rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.7rem;
+            }
+            
+            .btn {
+                padding: 14px 25px;
+                font-size: 1rem;
+            }
+            
+            .contact-form-container {
+                padding: 35px 25px;
+            }
+            
+            .logo-icon {
+                width: 65px;
+                height: 65px;
+                font-size: 2.2rem;
+                margin-right: 12px;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
+            }
+            
+            .logo-text span {
+                font-size: 1.2rem;
+            }
+            
+            .contact-item {
+                padding: 20px;
+            }
+            
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .event-type-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .page-hero h1 {
+                font-size: 1.7rem;
+            }
+            
+            .form-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .form-navigation .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">EMK</div>
+                <div class="logo-text">Event Management<span>Kosovo</span></div>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="process.html">Our Process</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>></span> <span>Start Your Event Journey</span>
+            </div>
+            <h1>Start Your Event Journey</h1>
+            <p>Let's transform your vision into an unforgettable experience. Share your event details with us and we'll create a custom plan for you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section>
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Let's Create Something Exceptional Together</h2>
+                    <p>Whether you're planning a conference, executive networking event, or corporate gathering, our team is ready to help you create an unforgettable experience that delivers real business value.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <p>101webstudio@gmail.com</p>
+                                <p>contact@emk-kosovo.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call Us</h4>
+                                <p>+383 44 123 456 (Office)</p>
+                                <p>+383 38 654 321 (Mobile)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Visit Our Office</h4>
+                                <p>Prishtina, Kosovo</p>
+                                <p>Business District, Floor 5</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 50px;">
+                        <h3>Why Choose EMK?</h3>
+                        <ul style="margin-top: 20px; margin-left: 20px;">
+                            <li style="margin-bottom: 15px;">✓ <strong>Strategic Approach:</strong> Every event aligned with business objectives</li>
+                            <li style="margin-bottom: 15px;">✓ <strong>Local Expertise:</strong> Deep understanding of Kosovo's business landscape</li>
+                            <li style="margin-bottom: 15px;">✓ <strong>Proven Track Record:</strong> 280+ successful events managed</li>
+                            <li style="margin-bottom: 15px;">✓ <strong>Full-Service Solutions:</strong> End-to-end event management</li>
+                            <li style="margin-bottom: 15px;">✓ <strong>98% Client Satisfaction:</strong> Consistently exceeding expectations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <!-- Form Timeline -->
+                    <div class="form-timeline step-1">
+                        <div class="timeline-step completed">
+                            <div class="step-circle">✓</div>
+                            <p>Event Type</p>
+                        </div>
+                        <div class="timeline-step active">
+                            <div class="step-circle">2</div>
+                            <p>Your Details</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-circle">3</div>
+                            <p>Review & Submit</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Header -->
+                    <div class="form-header">
+                        <h2>Start Planning Your Event</h2>
+                        <p>Complete the form below and we'll contact you within 24 hours</p>
+                    </div>
+                    
+                    <!-- Multi-Step Form -->
+                    <form id="eventJourneyForm">
+                        <!-- Step 1: Event Type -->
+                        <div class="form-step active" id="step1">
+                            <div class="form-group">
+                                <label>What type of event are you planning? *</label>
+                                <div class="event-type-cards">
+                                    <div class="event-type-card" data-type="conference">
+                                        <i class="fas fa-briefcase"></i>
+                                        <h4>Conference / Summit</h4>
+                                        <p>Industry gatherings, annual meetings</p>
+                                        <div class="checkmark"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <div class="event-type-card" data-type="networking">
+                                        <i class="fas fa-handshake"></i>
+                                        <h4>Executive Networking</h4>
+                                        <p>Business connections, partnerships</p>
+                                        <div class="checkmark"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <div class="event-type-card" data-type="product-launch">
+                                        <i class="fas fa-rocket"></i>
+                                        <h4>Product Launch</h4>
+                                        <p>New product reveals, media events</p>
+                                        <div class="checkmark"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <div class="event-type-card" data-type="gala-dinner">
+                                        <i class="fas fa-glass-cheers"></i>
+                                        <h4>Gala Dinner / Awards</h4>
+                                        <p>Award ceremonies, celebrations</p>
+                                        <div class="checkmark"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <div class="event-type-card" data-type="team-building">
+                                        <i class="fas fa-users"></i>
+                                        <h4>Team Building</h4>
+                                        <p>Corporate retreats, team activities</p>
+                                        <div class="checkmark"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <div class="event-type-card" data-type="other">
+                                        <i class="fas fa-star"></i>
+                                        <h4>Other Event</h4>
+                                        <p>Custom event requirements</p>
+                                        <div class="checkmark"><i class="fas fa-check"></i></div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="eventType" name="eventType" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="attendees">Estimated Number of Attendees *</label>
+                                <select id="attendees" name="attendees" required>
+                                    <option value="" disabled selected>Select number of attendees</option>
+                                    <option value="10-50">10 - 50</option>
+                                    <option value="50-100">50 - 100</option>
+                                    <option value="100-200">100 - 200</option>
+                                    <option value="200-500">200 - 500</option>
+                                    <option value="500+">500+</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="eventDate">Preferred Event Date</label>
+                                <input type="date" id="eventDate" name="eventDate" min="<?php echo date('Y-m-d'); ?>">
+                            </div>
+                            
+                            <div class="form-navigation">
+                                <div></div> <!-- Empty div for spacing -->
+                                <button type="button" class="btn btn-secondary next-step" data-next="step2">Next: Your Details <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Your Details -->
+                        <div class="form-step" id="step2">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                                </div>
+                                <div class="form-group">
+                                    <label for="company">Company / Organization *</label>
+                                    <input type="text" id="company" name="company" required placeholder="Your Company Name">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="you@company.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+383 XX XXX XXX">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="position">Your Position</label>
+                                <input type="text" id="position" name="position" placeholder="CEO, Marketing Director, etc.">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="industry">Industry</label>
+                                <select id="industry" name="industry">
+                                    <option value="" selected>Select your industry</option>
+                                    <option value="technology">Technology</option>
+                                    <option value="finance">Finance & Banking</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="education">Education</option>
+                                    <option value="government">Government</option>
+                                    <option value="non-profit">Non-Profit</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-outline prev-step" data-prev="step1"><i class="fas fa-arrow-left"></i> Back</button>
+                                <button type="button" class="btn btn-secondary next-step" data-next="step3">Next: Event Details <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Event Details -->
+                        <div class="form-step" id="step3">
+                            <div class="form-group">
+                                <label for="budget">Estimated Budget Range</label>
+                                <select id="budget" name="budget">
+                                    <option value="" selected>Select budget range</option>
+                                    <option value="5k-10k">€5,000 - €10,000</option>
+                                    <option value="10k-25k">€10,000 - €25,000</option>
+                                    <option value="25k-50k">€25,000 - €50,000</option>
+                                    <option value="50k-100k">€50,000 - €100,000</option>
+                                    <option value="100k+">€100,000+</option>
+                                    <option value="not-sure">Not sure yet</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="venue">Preferred Venue Type</label>
+                                <select id="venue" name="venue">
+                                    <option value="" selected>Select venue preference</option>
+                                    <option value="hotel">Hotel Conference Center</option>
+                                    <option value="convention">Convention Center</option>
+                                    <option value="outdoor">Outdoor Venue</option>
+                                    <option value="unique">Unique / Non-traditional</option>
+                                    <option value="virtual">Virtual / Hybrid</option>
+                                    <option value="not-sure">Not sure - need recommendations</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="services">Additional Services Needed</label>
+                                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 10px;">
+                                    <div class="checkbox-group" style="margin-bottom: 0;">
+                                        <input type="checkbox" id="service1" name="services[]" value="speaker-management">
+                                        <label for="service1">Speaker Management</label>
+                                    </div>
+                                    <div class="checkbox-group" style="margin-bottom: 0;">
+                                        <input type="checkbox" id="service2" name="services[]" value="marketing">
+                                        <label for="service2">Event Marketing</label>
+                                    </div>
+                                    <div class="checkbox-group" style="margin-bottom: 0;">
+                                        <input type="checkbox" id="service3" name="services[]" value="av-production">
+                                        <label for="service3">AV Production</label>
+                                    </div>
+                                    <div class="checkbox-group" style="margin-bottom: 0;">
+                                        <input type="checkbox" id="service4" name="services[]" value="catering">
+                                        <label for="service4">Catering Services</label>
+                                    </div>
+                                    <div class="checkbox-group" style="margin-bottom: 0;">
+                                        <input type="checkbox" id="service5" name="services[]" value="registration">
+                                        <label for="service5">Registration Management</label>
+                                    </div>
+                                    <div class="checkbox-group" style="margin-bottom: 0;">
+                                        <input type="checkbox" id="service6" name="services[]" value="post-event">
+                                        <label for="service6">Post-Event Analysis</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Tell us about your event vision *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Please describe your event objectives, themes, special requirements, and any other important details..."></textarea>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">I agree to the <a href="#" onclick="return false;">Privacy Policy</a> and consent to EMK contacting me about my event inquiry. *</label>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Yes, I'd like to receive updates, event tips, and industry insights from EMK.</label>
+                            </div>
+                            
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-outline prev-step" data-prev="step2"><i class="fas fa-arrow-left"></i> Back</button>
+                                <button type="submit" class="btn btn-accent">Submit Your Event Inquiry <i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <div class="success-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h2>Thank You for Your Submission!</h2>
+                        <p>Your event inquiry has been successfully submitted. Our team will review your details and contact you within 24 hours to discuss your event vision.</p>
+                        <p>In the meantime, you can explore our <a href="services.html" style="color: var(--secondary-color); font-weight: 600;">services</a> or learn more about our <a href="process.html" style="color: var(--secondary-color); font-weight: 600;">process</a>.</p>
+                        <a href="index.html" class="btn" style="margin-top: 20px;">Return to Home <i class="fas fa-home"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section>
+        <div class="container">
+            <div class="map-section">
+                <div class="map-container">
+                    <!-- Map Placeholder - In a real implementation, you would embed Google Maps here -->
+                    <div style="width: 100%; height: 100%; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; color: var(--gray-color);">
+                        <div style="text-align: center;">
+                            <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 15px; color: var(--secondary-color);"></i>
+                            <h3 style="color: var(--primary-color);">Our Location</h3>
+                            <p>Prishtina, Kosovo - Business District</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-overlay">
+                        <h3>Visit Our Office</h3>
+                        <p><i class="fas fa-map-marker-alt" style="color: var(--accent-color); margin-right: 10px;"></i> Business District, Floor 5, Prishtina, Kosovo</p>
+                        <p><i class="fas fa-clock" style="color: var(--accent-color); margin-right: 10px;"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+                        <p><i class="fas fa-phone" style="color: var(--accent-color); margin-right: 10px;"></i> +383 44 123 456</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline" style="margin-top: 15px; width: 100%;">Get Directions <i class="fas fa-directions"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Working Hours -->
+            <div class="hours-section">
+                <div class="section-title" style="margin-bottom: 50px;">
+                    <h2>When Can We Connect?</h2>
+                    <p>Choose the communication method that works best for you</p>
+                </div>
+                
+                <div class="hours-grid">
+                    <div class="hour-item">
+                        <div class="hour-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone Consultation</h3>
+                        <p>Schedule a 30-minute discovery call with our event experts to discuss your vision and requirements.</p>
+                        <a href="tel:+38344123456" class="btn btn-secondary" style="margin-top: 20px;">Call Now <i class="fas fa-phone"></i></a>
+                    </div>
+                    
+                    <div class="hour-item">
+                        <div class="hour-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Video Meeting</h3>
+                        <p>Prefer a face-to-face discussion? Book a virtual meeting with our team at your convenience.</p>
+                        <a href="mailto:contact@emk-kosovo.com?subject=Schedule Video Meeting" class="btn btn-outline" style="margin-top: 20px;">Schedule Meeting <i class="fas fa-calendar"></i></a>
+                    </div>
+                    
+                    <div class="hour-item">
+                        <div class="hour-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Office Visit</h3>
+                        <p>Visit our headquarters in Prishtina for an in-person consultation and tour of our facilities.</p>
+                        <a href="#map" class="btn btn-outline" style="margin-top: 20px;">Visit Us <i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Common Questions</h2>
+                <p>Quick answers to help you start your event journey</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 20px;"><i class="fas fa-question-circle" style="color: var(--accent-color); margin-right: 10px;"></i> How soon should I contact you?</h3>
+                        <p>We recommend contacting us at least 3-6 months before your desired event date for optimal planning. However, we can accommodate urgent requests for events within shorter timelines.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 20px;"><i class="fas fa-question-circle" style="color: var(--accent-color); margin-right: 10px;"></i> What happens after I submit the form?</h3>
+                        <p>Within 24 hours, our event consultant will contact you for an initial discussion. We'll then schedule a detailed consultation to understand your needs and prepare a custom proposal.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 20px;"><i class="fas fa-question-circle" style="color: var(--accent-color); margin-right: 10px;"></i> Do you handle international events?</h3>
+                        <p>Yes! While based in Kosovo, we have extensive experience managing events across Europe and can coordinate international logistics, multilingual support, and cross-cultural considerations.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 20px;"><i class="fas fa-question-circle" style="color: var(--accent-color); margin-right: 10px;"></i> What is your typical response time?</h3>
+                        <p>We guarantee an initial response within 24 hours for all inquiries. For urgent matters, you can call us directly at +383 44 123 456 for immediate assistance.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 50px;">
+                    <p style="font-size: 1.1rem;">Have more questions? <a href="mailto:contact@emk-kosovo.com" style="color: var(--secondary-color); font-weight: 600;">Email us directly</a> or call +383 44 123 456</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EMK Event Management</h3>
+                    <div style="margin-bottom: 25px;">
+                        <div class="logo" style="margin-bottom: 20px;">
+                            <div class="logo-icon" style="width: 60px; height: 60px; font-size: 1.8rem; margin-right: 12px;">EMK</div>
+                            <div class="logo-text" style="font-size: 1.6rem; color: white;">Event Management<span style="color: #ddd;">Kosovo</span></div>
+                        </div>
+                        <p style="color: #bbb; margin-top: 15px;">Your premier partner for strategic corporate events and executive networking in Kosovo and the Balkan region.</p>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="partners.html"><i class="fas fa-chevron-right"></i> Our Partners</a></li>
+                        <li><a href="process.html"><i class="fas fa-chevron-right"></i> Our Process</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Prishtina, Kosovo<br>Business District, Floor 5</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+383 44 123 456<br>+383 38 654 321</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>101webstudio@gmail.com<br>contact@emk-kosovo.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 2:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EMK - Event Management Kosovo. All rights reserved. | Professional Event Solutions</p>
+                <p style="margin-top: 10px;">Website crafted with <i class="fas fa-heart" style="color: var(--accent-color);"></i> for exceptional event experiences</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav ul').classList.remove('active');
+                const icon = document.querySelector('.mobile-menu-btn i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                
+                // Update active nav link
+                document.querySelectorAll('nav ul li a').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Event type card selection
+        document.querySelectorAll('.event-type-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove selected class from all cards
+                document.querySelectorAll('.event-type-card').forEach(c => {
+                    c.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked card
+                this.classList.add('selected');
+                
+                // Update hidden input value
+                const eventType = this.getAttribute('data-type');
+                document.getElementById('eventType').value = eventType;
+            });
+        });
+        
+        // Multi-step form navigation
+        document.querySelectorAll('.next-step').forEach(button => {
+            button.addEventListener('click', function() {
+                const nextStep = this.getAttribute('data-next');
+                const currentStep = this.closest('.form-step').id;
+                
+                // Validate current step
+                if (validateStep(currentStep)) {
+                    // Hide current step
+                    document.getElementById(currentStep).classList.remove('active');
+                    
+                    // Show next step
+                    document.getElementById(nextStep).classList.add('active');
+                    
+                    // Update timeline
+                    updateTimeline(nextStep);
+                }
+            });
+        });
+        
+        document.querySelectorAll('.prev-step').forEach(button => {
+            button.addEventListener('click', function() {
+                const prevStep = this.getAttribute('data-prev');
+                const currentStep = this.closest('.form-step').id;
+                
+                // Hide current step
+                document.getElementById(currentStep).classList.remove('active');
+                
+                // Show previous step
+                document.getElementById(prevStep).classList.add('active');
+                
+                // Update timeline
+                updateTimeline(prevStep);
+            });
+        });
+        
+        // Update timeline function
+        function updateTimeline(step) {
+            const timeline = document.querySelector('.form-timeline');
+            const steps = document.querySelectorAll('.timeline-step');
+            
+            // Remove active and completed classes from all steps
+            steps.forEach(stepEl => {
+                stepEl.classList.remove('active', 'completed');
+            });
+            
+            // Update based on current step
+            if (step === 'step1') {
+                timeline.classList.remove('step-2', 'step-3');
+                timeline.classList.add('step-1');
+                steps[0].classList.add('active');
+            } else if (step === 'step2') {
+                timeline.classList.remove('step-1', 'step-3');
+                timeline.classList.add('step-2');
+                steps[0].classList.add('completed');
+                steps[1].classList.add('active');
+            } else if (step === 'step3') {
+                timeline.classList.remove('step-1', 'step-2');
+                timeline.classList.add('step-3');
+                steps[0].classList.add('completed');
+                steps[1].classList.add('completed');
+                steps[2].classList.add('active');
+            }
+        }
+        
+        // Form validation function
+        function validateStep(stepId) {
+            const step = document.getElementById(stepId);
+            const inputs = step.querySelectorAll('input[required], select[required], textarea[required]');
+            let isValid = true;
+            
+            // Clear previous error states
+            inputs.forEach(input => {
+                input.style.borderColor = '#e1e5eb';
+            });
+            
+            // Check each required field
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.style.borderColor = 'var(--accent-color)';
+                    isValid = false;
+                    
+                    // Scroll to first invalid field
+                    if (isValid === false) {
+                        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        input.focus();
+                    }
+                }
+                
+                // Special validation for email
+                if (input.type === 'email' && input.value.trim()) {
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(input.value.trim())) {
+                        input.style.borderColor = 'var(--accent-color)';
+                        isValid = false;
+                        alert('Please enter a valid email address');
+                        input.focus();
+                    }
+                }
+            });
+            
+            // Special validation for step 1 (event type)
+            if (stepId === 'step1') {
+                const eventType = document.getElementById('eventType').value;
+                if (!eventType) {
+                    alert('Please select an event type');
+                    isValid = false;
+                }
+            }
+            
+            return isValid;
+        }
+        
+        // Form submission
+        document.getElementById('eventJourneyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate all steps
+            const step1Valid = validateStep('step1');
+            const step2Valid = validateStep('step2');
+            const step3Valid = validateStep('step3');
+            
+            if (step1Valid && step2Valid && step3Valid) {
+                // Get form data
+                const formData = new FormData(this);
+                const data = {};
+                formData.forEach((value, key) => {
+                    if (key === 'services[]') {
+                        if (!data[key]) data[key] = [];
+                        data[key].push(value);
+                    } else {
+                        data[key] = value;
+                    }
+                });
+                
+                // Show success message
+                document.querySelector('.contact-form-container').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+                
+                // In a real implementation, you would send the data to your server here
+                console.log('Form submitted with data:', data);
+                
+                // Show confirmation message with details
+                setTimeout(() => {
+                    const eventTypeMap = {
+                        'conference': 'Conference / Summit',
+                        'networking': 'Executive Networking',
+                        'product-launch': 'Product Launch',
+                        'gala-dinner': 'Gala Dinner / Awards',
+                        'team-building': 'Team Building',
+                        'other': 'Other Event'
+                    };
+                    
+                    alert(`Thank you ${data.name} from ${data.company}!\n\nYour inquiry for a ${eventTypeMap[data.eventType]} with ${data.attendees} attendees has been submitted successfully.\n\nOur team will contact you at ${data.email} within 24 hours to discuss your event vision.`);
+                }, 500);
+            } else {
+                alert('Please complete all required fields before submitting.');
+            }
+        });
+        
+        // Set minimum date for event date picker
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const formattedDate = tomorrow.toISOString().split('T')[0];
+            document.getElementById('eventDate').min = formattedDate;
+            
+            // Set current year in footer
+            const yearSpan = document.querySelector('.copyright p');
+            if (yearSpan) {
+                const currentYear = new Date().getFullYear();
+                yearSpan.innerHTML = yearSpan.innerHTML.replace('2023', currentYear);
+            }
+            
+            // Set default event type selection (Conference)
+            const defaultCard = document.querySelector('.event-type-card[data-type="conference"]');
+            if (defaultCard) {
+                defaultCard.classList.add('selected');
+                document.getElementById('eventType').value = 'conference';
+            }
+        });
+        
+        // Add animation to contact items on scroll
+        const contactObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 200);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            contactObserver.observe(item);
+        });
+        
+        // Add animation to hour items on scroll
+        document.querySelectorAll('.hour-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            contactObserver.observe(item);
+        });
+    </script>
+</body>
+</html>
