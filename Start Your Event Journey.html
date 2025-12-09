@@ -164,7 +164,7 @@
         }
         
         header.scrolled {
-            padding: 5px 0;
+            padding: 10px 0;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
         
@@ -172,7 +172,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 15px 20px;
         }
         
         .logo {
@@ -882,7 +882,84 @@
             font-size: 0.95rem;
         }
         
-        /* Responsive Design */
+        /* Service Detail - Fixed Image Styles */
+        .service-detail {
+            margin-bottom: 60px;
+        }
+        
+        .service-detail-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .service-detail-img {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            height: 450px;
+            width: 100%;
+        }
+        
+        .service-detail-img img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: var(--transition);
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .service-detail-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .service-detail-text {
+            padding: 10px 0;
+        }
+        
+        .service-detail-text h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        /* Reorder for alternating layout */
+        .service-detail:nth-child(odd) .service-detail-content {
+            direction: ltr;
+        }
+        
+        .service-detail:nth-child(even) .service-detail-content {
+            direction: rtl;
+        }
+        
+        .service-detail:nth-child(even) .service-detail-text {
+            direction: ltr;
+            text-align: left;
+        }
+        
+        /* Responsive Design - Desktop First */
+        @media (min-width: 993px) {
+            .service-detail-img {
+                max-width: 100%;
+                height: 500px;
+            }
+            
+            .service-detail-content {
+                gap: 70px;
+            }
+            
+            .contact-form-container {
+                top: 120px;
+            }
+            
+            .event-type-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
         @media (max-width: 1200px) {
             .form-timeline::after {
                 width: 50%;
@@ -922,9 +999,45 @@
             .contact-form-container {
                 position: static;
             }
+            
+            .service-detail-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .service-detail-img {
+                height: 400px;
+                order: 1;
+            }
+            
+            .service-detail-text {
+                order: 2;
+                padding: 0;
+            }
+            
+            .service-detail:nth-child(odd) .service-detail-content,
+            .service-detail:nth-child(even) .service-detail-content {
+                direction: ltr;
+            }
+            
+            .service-detail:nth-child(even) .service-detail-text {
+                direction: ltr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .event-type-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 768px) {
+            :root {
+                --section-spacing: 60px;
+            }
+            
             .header-container {
                 padding: 15px;
             }
@@ -956,8 +1069,8 @@
             }
             
             .page-hero {
-                padding: 180px 0 100px;
-                margin-top: 90px;
+                padding: 140px 0 60px;
+                margin-top: 80px;
                 background-attachment: scroll;
             }
             
@@ -969,26 +1082,30 @@
                 font-size: 2rem;
             }
             
+            .service-detail-img {
+                height: 350px;
+            }
+            
+            .service-detail-content {
+                gap: 30px;
+            }
+            
             .logo-icon {
-                width: 70px;
-                height: 70px;
-                font-size: 2.5rem;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
             }
             
             .logo-text {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .logo-text span {
-                font-size: 1.4rem;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
+                font-size: 1.2rem;
             }
             
             .event-type-cards {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
             }
             
             .form-timeline::before,
@@ -1023,11 +1140,15 @@
             .hours-section {
                 padding: 40px 30px;
             }
+            
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 576px) {
             :root {
-                --section-spacing: 60px;
+                --section-spacing: 50px;
             }
             
             .page-hero h1 {
@@ -1047,43 +1168,120 @@
                 padding: 35px 25px;
             }
             
+            .service-detail-img {
+                height: 280px;
+            }
+            
             .logo-icon {
-                width: 65px;
-                height: 65px;
-                font-size: 2.2rem;
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
                 margin-right: 12px;
             }
             
             .logo-text {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             
             .logo-text span {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
             
             .contact-item {
                 padding: 20px;
+                flex-direction: column;
+                text-align: center;
             }
             
             .contact-icon {
                 width: 60px;
                 height: 60px;
                 font-size: 1.5rem;
+                margin-right: 0;
+                margin-bottom: 15px;
             }
             
-            .event-type-cards {
-                grid-template-columns: 1fr;
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 14px 16px;
+                font-size: 16px;
             }
             
-            .hours-grid {
+            .checkbox-group {
+                align-items: flex-start;
+            }
+            
+            .checkbox-group input {
+                margin-top: 5px;
+            }
+            
+            .form-group [style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .success-message {
+                padding: 40px 20px;
+            }
+            
+            .success-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2.5rem;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+            
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .footer-content {
                 grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .footer-column h3 {
+                font-size: 1.3rem;
             }
         }
         
         @media (max-width: 400px) {
             .page-hero h1 {
                 font-size: 1.7rem;
+            }
+            
+            .logo-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .logo-text {
+                font-size: 1.4rem;
+            }
+            
+            .logo-text span {
+                font-size: 0.9rem;
+            }
+            
+            .event-type-cards {
+                gap: 15px;
+            }
+            
+            .event-type-card {
+                padding: 15px;
+            }
+            
+            .event-type-card i {
+                font-size: 1.5rem;
+            }
+            
+            .event-type-card h4 {
+                font-size: 1.1rem;
             }
             
             .form-navigation {
@@ -1094,6 +1292,19 @@
             .form-navigation .btn {
                 width: 100%;
             }
+        }
+        
+        /* Make sure all images are responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Fix FAQ grid */
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
         }
     </style>
 </head>
@@ -1288,7 +1499,7 @@
                             </div>
                             
                             <div class="form-navigation">
-                                <div></div> <!-- Empty div for spacing -->
+                                <div></div>
                                 <button type="button" class="btn btn-secondary next-step" data-next="step2">Next: Your Details <i class="fas fa-arrow-right"></i></button>
                             </div>
                         </div>
@@ -1443,7 +1654,7 @@
         <div class="container">
             <div class="map-section">
                 <div class="map-container">
-                    <!-- Map Placeholder - In a real implementation, you would embed Google Maps here -->
+                    <!-- Map Placeholder -->
                     <div style="width: 100%; height: 100%; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; color: var(--gray-color);">
                         <div style="text-align: center;">
                             <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 15px; color: var(--secondary-color);"></i>
@@ -1510,7 +1721,7 @@
             </div>
             
             <div style="max-width: 900px; margin: 0 auto;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
+                <div class="faq-grid">
                     <div>
                         <h3 style="color: var(--primary-color); margin-bottom: 20px;"><i class="fas fa-question-circle" style="color: var(--accent-color); margin-right: 10px;"></i> How soon should I contact you?</h3>
                         <p>We recommend contacting us at least 3-6 months before your desired event date for optimal planning. However, we can accommodate urgent requests for events within shorter timelines.</p>
@@ -1857,6 +2068,4 @@
         });
     </script>
 </body>
-
 </html>
-
