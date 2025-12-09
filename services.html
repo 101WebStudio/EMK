@@ -32,6 +32,12 @@
             box-sizing: border-box;
         }
         
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
         body {
             font-family: 'Open Sans', sans-serif;
             line-height: 1.7;
@@ -51,7 +57,7 @@
             width: 100%;
             max-width: 1300px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         
         section {
@@ -172,7 +178,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 12px 15px;
         }
         
         .logo {
@@ -213,7 +219,7 @@
             color: var(--accent-color);
             display: block;
             font-weight: 600;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             margin-top: 3px;
         }
         
@@ -280,11 +286,11 @@
             background: linear-gradient(rgba(10, 36, 99, 0.88), rgba(10, 36, 99, 0.92)), url('https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: scroll;
             color: white;
             text-align: center;
-            padding: 180px 0 100px;
-            margin-top: 100px;
+            padding: 140px 0 80px;
+            margin-top: 70px;
             position: relative;
             overflow: hidden;
         }
@@ -292,8 +298,8 @@
         .page-hero:before {
             content: '';
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%);
             top: 10%;
             right: 10%;
@@ -303,8 +309,8 @@
         .page-hero:after {
             content: '';
             position: absolute;
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             background: radial-gradient(circle, rgba(62, 146, 204, 0.15) 0%, transparent 70%);
             bottom: 20%;
             left: 5%;
@@ -319,7 +325,7 @@
         }
         
         .page-hero h1 {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
             color: white;
             line-height: 1.1;
@@ -336,8 +342,9 @@
         
         .breadcrumb {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             color: white;
+            font-size: 0.9rem;
         }
         
         .breadcrumb a {
@@ -359,13 +366,13 @@
         
         /* Service Detail */
         .service-detail {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         
         .service-detail-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
+            grid-template-columns: 1fr;
+            gap: 40px;
             align-items: center;
         }
         
@@ -374,6 +381,7 @@
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow-hover);
+            order: 1;
         }
         
         .service-detail-img img {
@@ -387,41 +395,55 @@
             transform: scale(1.05);
         }
         
+        .service-detail-text {
+            order: 2;
+        }
+        
         .service-detail-text h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--primary-color);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         
         .service-features {
-            margin: 30px 0;
+            margin: 25px 0;
         }
         
         .service-features li {
             list-style: none;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: flex;
             align-items: flex-start;
         }
         
         .service-features li i {
             color: var(--accent-color);
-            font-size: 1.2rem;
-            margin-right: 15px;
-            margin-top: 5px;
+            font-size: 1.1rem;
+            margin-right: 12px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .service-features li strong {
+            color: var(--primary-color);
+        }
+        
+        .service-features li span {
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
         
         /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
         
         .service-card {
             background-color: white;
             border-radius: var(--border-radius);
-            padding: 50px 40px;
+            padding: 40px 30px;
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -433,22 +455,22 @@
         }
         
         .service-card:hover {
-            transform: translateY(-15px);
+            transform: translateY(-10px);
             box-shadow: var(--shadow-hover);
             border-top-color: var(--accent-color);
         }
         
         .service-icon {
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             background: linear-gradient(135deg, rgba(62, 146, 204, 0.1), rgba(10, 36, 99, 0.1));
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             color: var(--secondary-color);
-            font-size: 2.5rem;
+            font-size: 2rem;
             transition: var(--transition);
         }
         
@@ -460,13 +482,15 @@
         
         .service-card h3 {
             color: var(--primary-color);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
         }
         
         .service-card p {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             flex-grow: 1;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         .service-link {
@@ -477,6 +501,7 @@
             align-items: center;
             gap: 8px;
             transition: var(--transition);
+            font-size: 0.95rem;
         }
         
         .service-link:hover {
@@ -489,7 +514,7 @@
             background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
             color: white;
             text-align: center;
-            padding: 100px 0;
+            padding: 70px 0;
             position: relative;
             overflow: hidden;
         }
@@ -497,11 +522,11 @@
         .cta-section:before {
             content: '';
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            top: -100px;
-            right: -100px;
+            top: -50px;
+            right: -50px;
             border-radius: 50%;
         }
         
@@ -514,36 +539,37 @@
         
         .cta-content h2 {
             color: white;
-            margin-bottom: 30px;
-            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
         }
         
         .cta-content p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
             opacity: 0.9;
+            line-height: 1.6;
         }
         
         /* Footer */
         footer {
             background-color: var(--primary-dark);
             color: white;
-            padding: 80px 0 30px;
+            padding: 60px 0 25px;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            margin-bottom: 60px;
+            gap: 40px;
+            margin-bottom: 50px;
         }
         
         .footer-column h3 {
             color: white;
-            margin-bottom: 30px;
-            font-size: 1.5rem;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
         }
         
         .footer-column h3:after {
@@ -559,7 +585,7 @@
         
         .footer-links li {
             list-style: none;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .footer-links a {
@@ -569,6 +595,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            font-size: 0.95rem;
         }
         
         .footer-links a:hover {
@@ -582,34 +609,40 @@
         
         .contact-info li {
             list-style: none;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: flex;
             align-items: flex-start;
         }
         
         .contact-info i {
-            margin-right: 15px;
+            margin-right: 12px;
             color: var(--secondary-color);
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .contact-info span {
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
         
         .social-icons {
             display: flex;
-            gap: 15px;
-            margin-top: 25px;
+            gap: 12px;
+            margin-top: 20px;
         }
         
         .social-icons a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background-color: rgba(255, 255, 255, 0.08);
             border-radius: 10px;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: var(--transition);
         }
         
@@ -620,17 +653,24 @@
         
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 25px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #aaa;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
         
-        /* Responsive Design */
+        /* Responsive Design - Mobile First */
         @media (max-width: 1200px) {
-            .process-steps:before {
-                width: 70%;
-                left: 15%;
+            .container {
+                padding: 0 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            
+            .page-hero h1 {
+                font-size: 2.5rem;
             }
         }
         
@@ -639,31 +679,62 @@
                 --section-spacing: 80px;
             }
             
-            .service-detail-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
+            .section-title {
+                margin-bottom: 50px;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title p {
+                font-size: 1rem;
+                padding: 0 20px;
             }
             
             .page-hero h1 {
-                font-size: 3rem;
+                font-size: 2.2rem;
             }
             
             .page-hero p {
                 font-size: 1.1rem;
             }
             
-            .section-title h2 {
-                font-size: 2.3rem;
+            .service-detail-text h2 {
+                font-size: 1.8rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
             }
             
             .cta-content h2 {
-                font-size: 2.3rem;
+                font-size: 2rem;
+            }
+            
+            .logo-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
+            }
+            
+            .logo-text span {
+                font-size: 1.1rem;
             }
         }
         
         @media (max-width: 768px) {
+            :root {
+                --section-spacing: 60px;
+            }
+            
             .header-container {
-                padding: 15px;
+                padding: 10px 15px;
             }
             
             .mobile-menu-btn {
@@ -672,13 +743,13 @@
             
             nav ul {
                 position: fixed;
-                top: 100px;
+                top: 80px;
                 left: -100%;
                 width: 100%;
                 flex-direction: column;
                 background-color: white;
                 box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-                padding: 30px;
+                padding: 25px;
                 transition: var(--transition);
                 z-index: 999;
                 border-radius: 0 0 20px 20px;
@@ -689,57 +760,94 @@
             }
             
             nav ul li {
-                margin: 0 0 25px 0;
+                margin: 0 0 20px 0;
+            }
+            
+            nav ul li a.btn {
+                display: inline-flex;
+                width: auto;
+                margin-top: 10px;
             }
             
             .page-hero {
-                padding: 180px 0 100px;
-                margin-top: 90px;
-                background-attachment: scroll;
+                padding: 120px 0 60px;
+                margin-top: 60px;
             }
             
             .page-hero h1 {
-                font-size: 2.3rem;
+                font-size: 1.8rem;
+                padding: 0 10px;
+            }
+            
+            .page-hero p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .breadcrumb {
+                font-size: 0.85rem;
+                margin-bottom: 20px;
+            }
+            
+            .service-detail {
+                margin-bottom: 50px;
+            }
+            
+            .service-detail-content {
+                gap: 30px;
+            }
+            
+            .service-detail-text h2 {
+                font-size: 1.6rem;
+            }
+            
+            .service-detail-text p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            
+            .service-features {
+                margin: 20px 0;
+            }
+            
+            .service-features li {
+                margin-bottom: 10px;
+            }
+            
+            .service-features li i {
+                font-size: 1rem;
+                margin-right: 10px;
+            }
+            
+            .service-features li span {
+                font-size: 0.9rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
             }
             
             .services-grid {
                 grid-template-columns: 1fr;
             }
             
-            .section-title h2 {
-                font-size: 2rem;
+            .service-card {
+                padding: 30px 25px;
             }
             
-            .logo-icon {
+            .service-icon {
                 width: 70px;
                 height: 70px;
-                font-size: 2.5rem;
+                font-size: 1.8rem;
+                margin-bottom: 20px;
             }
             
-            .logo-text {
-                font-size: 2rem;
+            .service-card h3 {
+                font-size: 1.3rem;
             }
             
-            .logo-text span {
-                font-size: 1.4rem;
-            }
-            
-            .cta-content h2 {
-                font-size: 2rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            :root {
-                --section-spacing: 60px;
-            }
-            
-            .page-hero h1 {
-                font-size: 1.9rem;
-            }
-            
-            .section-title h2 {
-                font-size: 1.7rem;
+            .service-card p {
+                font-size: 0.9rem;
             }
             
             .btn {
@@ -747,33 +855,190 @@
                 font-size: 1rem;
             }
             
-            .service-card {
-                padding: 40px 25px;
-            }
-            
-            .logo-icon {
-                width: 65px;
-                height: 65px;
-                font-size: 2.2rem;
-                margin-right: 12px;
-            }
-            
-            .logo-text {
-                font-size: 1.8rem;
-            }
-            
-            .logo-text span {
-                font-size: 1.2rem;
+            .cta-section {
+                padding: 50px 0;
             }
             
             .cta-content h2 {
                 font-size: 1.8rem;
+                padding: 0 10px;
+            }
+            
+            .cta-content p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            
+            .copyright {
+                padding-top: 20px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+            
+            :root {
+                --section-spacing: 50px;
+            }
+            
+            .container {
+                padding: 0 12px;
+            }
+            
+            .page-hero {
+                padding: 100px 0 50px;
+                margin-top: 55px;
+            }
+            
+            .page-hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .page-hero p {
+                font-size: 0.95rem;
+            }
+            
+            .breadcrumb {
+                font-size: 0.8rem;
+            }
+            
+            .section-title {
+                margin-bottom: 40px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+                padding-bottom: 15px;
+            }
+            
+            .section-title p {
+                font-size: 0.9rem;
+                margin-top: 15px;
+            }
+            
+            .logo-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                margin-right: 10px;
+            }
+            
+            .logo-text {
+                font-size: 1.5rem;
+            }
+            
+            .logo-text span {
+                font-size: 0.95rem;
+            }
+            
+            .service-detail {
+                margin-bottom: 40px;
+            }
+            
+            .service-detail-text h2 {
+                font-size: 1.4rem;
+            }
+            
+            .service-detail-text p {
+                font-size: 0.9rem;
+            }
+            
+            .service-features li {
+                margin-bottom: 8px;
+            }
+            
+            .service-features li i {
+                font-size: 0.9rem;
+                margin-right: 8px;
+            }
+            
+            .service-features li span {
+                font-size: 0.85rem;
+            }
+            
+            .service-card {
+                padding: 25px 20px;
+            }
+            
+            .service-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .service-card p {
+                font-size: 0.85rem;
+            }
+            
+            .cta-section {
+                padding: 40px 0;
+            }
+            
+            .cta-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .cta-content p {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+            
+            .cta-section .btn {
+                padding: 16px 30px;
+                font-size: 1rem;
+            }
+            
+            .footer-column h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+            
+            .footer-links a,
+            .contact-info span {
+                font-size: 0.9rem;
+            }
+            
+            .social-icons a {
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
             }
         }
         
         @media (max-width: 400px) {
             .page-hero h1 {
-                font-size: 1.7rem;
+                font-size: 1.4rem;
+            }
+            
+            .service-detail-text h2 {
+                font-size: 1.3rem;
+            }
+            
+            .service-card {
+                padding: 20px 18px;
+            }
+            
+            .service-icon {
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -793,10 +1058,10 @@
             
             <nav>
                 <ul>
-                    <li><a href="index.html" >Home</a></li>
-                    <li><a href="services.html" class="active" >Services</a></li>
-                    <li><a href="about.html" >About Us</a></li>
-                    <li><a href="process.html" >Our Process</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="process.html">Our Process</a></li>
                     <li><a href="index.html" class="btn btn-accent">Contact Us <i class="fas fa-arrow-right"></i></a></li>
                 </ul>
             </nav>
@@ -825,7 +1090,7 @@
                     <div class="service-detail-text">
                         <h2>Corporate Event Planning</h2>
                         <p>From product launches to annual conferences, we design and execute events that align with your brand identity and business objectives, ensuring seamless experiences that exceed expectations.</p>
-                        <p>Our team specializes in creating corporate events that not only impress but also deliver measurable results. We handle every detail from concept development to post-event analysis.</p>
+                        <p>Our team specializes in creating corporate events that not only impress but also deliver measurable results.</p>
                         
                         <div class="service-features">
                             <ul>
@@ -837,7 +1102,7 @@
                             </ul>
                         </div>
                         
-                        <a href="Start Your Event Journey.html" class="btn"  style="margin-top: 30px;">Inquire About Corporate Events <i class="fas fa-arrow-right"></i></a>
+                        <a href="Start Your Event Journey.html" class="btn" style="margin-top: 25px;">Inquire About Corporate Events <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -848,7 +1113,7 @@
                     <div class="service-detail-text">
                         <h2>Executive Networking</h2>
                         <p>Strategic gatherings designed to connect industry leaders, decision-makers, and influencers. We create environments for meaningful business relationships that drive growth and opportunity.</p>
-                        <p>Our networking events are carefully curated to bring together the right people in settings that encourage genuine connections and productive conversations.</p>
+                        <p>Our networking events are carefully curated to bring together the right people in settings that encourage genuine connections.</p>
                         
                         <div class="service-features">
                             <ul>
@@ -860,7 +1125,7 @@
                             </ul>
                         </div>
                         
-                        <a href="Start Your Event Journey.html" class="btn" style="margin-top: 30px;">Plan a Networking Event <i class="fas fa-arrow-right"></i></a>
+                        <a href="Start Your Event Journey.html" class="btn" style="margin-top: 25px;">Plan a Networking Event <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="service-detail-img">
                         <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Executive Networking">
@@ -877,7 +1142,7 @@
                     <div class="service-detail-text">
                         <h2>Strategic Event Consulting</h2>
                         <p>Expert guidance on event strategy, audience engagement, and ROI measurement. We ensure your events deliver tangible business results and strengthen your organization's market position.</p>
-                        <p>Our consulting services help organizations develop event strategies that align with broader business goals and maximize impact.</p>
+                        <p>Our consulting services help organizations develop event strategies that align with broader business goals.</p>
                         
                         <div class="service-features">
                             <ul>
@@ -889,7 +1154,7 @@
                             </ul>
                         </div>
                         
-                        <a href="Start Your Event Journey.html" class="btn"  style="margin-top: 30px;">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
+                        <a href="Start Your Event Journey.html" class="btn" style="margin-top: 25px;">Schedule a Consultation <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -962,7 +1227,7 @@
             <div class="cta-content">
                 <h2>Ready to Transform Your Next Event?</h2>
                 <p>Our team is ready to help you create an unforgettable experience that delivers real business value.</p>
-                <a href="Start Your Event Journey.html" class="btn btn-accent"  style="font-size: 1.1rem; padding: 18px 45px;">Get Started Today <i class="fas fa-calendar-check"></i></a>
+                <a href="Start Your Event Journey.html" class="btn btn-accent" style="font-size: 1.1rem; padding: 18px 45px;">Get Started Today <i class="fas fa-calendar-check"></i></a>
             </div>
         </div>
     </section>
@@ -975,10 +1240,10 @@
                     <h3>EMK Event Management</h3>
                     <div style="margin-bottom: 25px;">
                         <div class="logo" style="margin-bottom: 20px;">
-                            <div class="logo-icon" style="width: 60px; height: 60px; font-size: 1.8rem; margin-right: 12px;">EMK</div>
-                            <div class="logo-text" style="font-size: 1.6rem; color: white;">Event Management<span style="color: #ddd;">Kosovo</span></div>
+                            <div class="logo-icon" style="width: 50px; height: 50px; font-size: 1.5rem; margin-right: 12px;">EMK</div>
+                            <div class="logo-text" style="font-size: 1.5rem; color: white;">Event Management<span style="color: #ddd;">Kosovo</span></div>
                         </div>
-                        <p style="color: #bbb; margin-top: 15px;">Your premier partner for strategic corporate events and executive networking in Kosovo and the Balkan region.</p>
+                        <p style="color: #bbb; margin-top: 15px; font-size: 0.9rem;">Your premier partner for strategic corporate events and executive networking in Kosovo.</p>
                     </div>
                     
                     <div class="social-icons">
@@ -995,7 +1260,6 @@
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
                         <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
                         <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="partners.html"><i class="fas fa-chevron-right"></i> Our Partners</a></li>
                         <li><a href="process.html"><i class="fas fa-chevron-right"></i> Our Process</a></li>
                         <li><a href="index.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
@@ -1004,10 +1268,10 @@
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> <span>Prishtina, Kosovo<br>Business District, Floor 5</span></li>
-                        <li><i class="fas fa-phone"></i> <span>+383 44 123 456<br>+383 38 654 321</span></li>
-                        <li><i class="fas fa-envelope"></i> <span>101webstudio@gmail.com<br>contact@emk-kosovo.com</span></li>
-                        <li><i class="fas fa-clock"></i> <span>Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 2:00 PM</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Prishtina, Kosovo</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+383 49 620 196<br>+383 49 222 951</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>contact@emk-kosovo.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon-Fri: 9:00 AM - 6:00 PM</span></li>
                     </ul>
                 </div>
             </div>
@@ -1054,7 +1318,7 @@
                     const targetElement = document.querySelector(targetId);
                     if(targetElement) {
                         window.scrollTo({
-                            top: targetElement.offsetTop - 100,
+                            top: targetElement.offsetTop - 80,
                             behavior: 'smooth'
                         });
                     }
@@ -1065,7 +1329,7 @@
         // Header background on scroll
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if(window.scrollY > 50) {
+            if(window.scrollY > 30) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
@@ -1079,15 +1343,15 @@
                     setTimeout(() => {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
-                    }, index * 200);
+                    }, index * 150);
                 }
             });
         }, { threshold: 0.1 });
         
         document.querySelectorAll('.service-card').forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             serviceObserver.observe(card);
         });
         
@@ -1101,9 +1365,4 @@
         });
     </script>
 </body>
-
 </html>
-
-
-
-
