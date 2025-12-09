@@ -32,6 +32,12 @@
             box-sizing: border-box;
         }
         
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
         body {
             font-family: 'Open Sans', sans-serif;
             line-height: 1.7;
@@ -51,7 +57,7 @@
             width: 100%;
             max-width: 1300px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         
         section {
@@ -172,7 +178,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 12px 15px;
         }
         
         .logo {
@@ -203,7 +209,7 @@
         
         .logo-text {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.4rem;
+            font-size: 2rem;
             font-weight: 800;
             color: var(--primary-color);
             line-height: 1.1;
@@ -213,7 +219,7 @@
             color: var(--accent-color);
             display: block;
             font-weight: 600;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             margin-top: 3px;
         }
         
@@ -280,11 +286,11 @@
             background: linear-gradient(rgba(10, 36, 99, 0.88), rgba(10, 36, 99, 0.92)), url('https://images.unsplash.com/photo-1542744173-05336fcc7ad4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: scroll;
             color: white;
             text-align: center;
-            padding: 180px 0 100px;
-            margin-top: 100px;
+            padding: 140px 0 80px;
+            margin-top: 70px;
             position: relative;
             overflow: hidden;
         }
@@ -292,8 +298,8 @@
         .page-hero:before {
             content: '';
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, transparent 70%);
             top: 10%;
             right: 10%;
@@ -303,8 +309,8 @@
         .page-hero:after {
             content: '';
             position: absolute;
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             background: radial-gradient(circle, rgba(62, 146, 204, 0.15) 0%, transparent 70%);
             bottom: 20%;
             left: 5%;
@@ -319,7 +325,7 @@
         }
         
         .page-hero h1 {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
             color: white;
             line-height: 1.1;
@@ -336,8 +342,9 @@
         
         .breadcrumb {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             color: white;
+            font-size: 0.9rem;
         }
         
         .breadcrumb a {
@@ -360,7 +367,7 @@
         /* Process Timeline */
         .process-timeline {
             position: relative;
-            margin-top: 60px;
+            margin-top: 40px;
         }
         
         .process-timeline::before {
@@ -369,71 +376,46 @@
             width: 4px;
             height: 100%;
             background: linear-gradient(to bottom, var(--secondary-color), var(--accent-color));
-            left: 50%;
-            transform: translateX(-50%);
+            left: 30px;
             border-radius: 2px;
             z-index: 1;
         }
         
         .timeline-item {
-            display: flex;
-            margin-bottom: 100px;
+            display: block;
+            margin-bottom: 60px;
             position: relative;
             z-index: 2;
         }
         
-        .timeline-item:nth-child(odd) {
-            flex-direction: row;
-        }
-        
-        .timeline-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        
         .timeline-content {
-            flex: 1;
-            padding: 40px;
             background-color: white;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-hover);
             position: relative;
-        }
-        
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-right: 60px;
-            text-align: right;
-        }
-        
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-left: 60px;
+            margin-left: 80px;
+            padding: 30px;
             text-align: left;
         }
         
         .timeline-icon {
             position: absolute;
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 800;
             box-shadow: var(--shadow);
             top: 50%;
+            left: -30px;
             transform: translateY(-50%);
             z-index: 3;
             transition: var(--transition);
-        }
-        
-        .timeline-item:nth-child(odd) .timeline-icon {
-            right: -40px;
-        }
-        
-        .timeline-item:nth-child(even) .timeline-icon {
-            left: -40px;
         }
         
         .timeline-content:hover .timeline-icon {
@@ -443,72 +425,59 @@
         
         .timeline-number {
             position: absolute;
-            top: -20px;
-            font-size: 6rem;
+            top: 15px;
+            right: 20px;
+            font-size: 3rem;
             font-weight: 800;
             color: rgba(10, 36, 99, 0.05);
             z-index: 0;
             line-height: 1;
         }
         
-        .timeline-item:nth-child(odd) .timeline-number {
-            right: 20px;
-        }
-        
-        .timeline-item:nth-child(even) .timeline-number {
-            left: 20px;
-        }
-        
         .timeline-content h3 {
             color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
             position: relative;
             z-index: 1;
         }
         
         .timeline-features {
-            margin-top: 25px;
+            margin-top: 20px;
         }
         
         .timeline-features li {
             list-style: none;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: flex-start;
         }
         
-        .timeline-item:nth-child(odd) .timeline-features li {
-            flex-direction: row-reverse;
-        }
-        
         .timeline-features li i {
             color: var(--accent-color);
-            font-size: 1rem;
+            font-size: 0.9rem;
             margin-top: 5px;
             flex-shrink: 0;
+            margin-right: 10px;
         }
         
-        .timeline-item:nth-child(odd) .timeline-features li i {
-            margin-left: 15px;
-        }
-        
-        .timeline-item:nth-child(even) .timeline-features li i {
-            margin-right: 15px;
+        .timeline-features li span {
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
         
         /* Process Cards */
         .process-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 80px;
+            gap: 30px;
+            margin-top: 50px;
         }
         
         .process-card {
             background-color: white;
             border-radius: var(--border-radius);
-            padding: 50px 40px;
+            padding: 40px 30px;
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -532,16 +501,16 @@
         }
         
         .process-card-icon {
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             background: linear-gradient(135deg, rgba(62, 146, 204, 0.1), rgba(10, 36, 99, 0.1));
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             color: var(--secondary-color);
-            font-size: 2.5rem;
+            font-size: 2rem;
             transition: var(--transition);
         }
         
@@ -553,8 +522,8 @@
         
         .process-card h3 {
             color: var(--primary-color);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
         }
         
         /* Case Studies */
@@ -564,8 +533,8 @@
         
         .case-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
         
         .case-card {
@@ -582,7 +551,7 @@
         }
         
         .case-img {
-            height: 250px;
+            height: 200px;
             overflow: hidden;
         }
         
@@ -598,47 +567,53 @@
         }
         
         .case-content {
-            padding: 40px;
+            padding: 25px;
         }
         
         .case-tag {
             display: inline-block;
             background-color: rgba(62, 146, 204, 0.1);
             color: var(--secondary-color);
-            padding: 8px 20px;
+            padding: 6px 15px;
             border-radius: 30px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         .case-content h3 {
             color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .case-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         .case-stats {
             display: flex;
             justify-content: space-between;
-            margin-top: 25px;
-            padding-top: 25px;
+            margin-top: 20px;
+            padding-top: 20px;
             border-top: 1px solid var(--light-gray);
         }
         
         .case-stat {
             text-align: center;
+            flex: 1;
         }
         
         .case-stat h4 {
             color: var(--primary-color);
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 5px;
         }
         
         .case-stat p {
             color: var(--gray-color);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         
         /* FAQ Section */
@@ -650,7 +625,7 @@
         .faq-item {
             background-color: white;
             border-radius: var(--border-radius);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             box-shadow: var(--shadow);
             overflow: hidden;
             transition: var(--transition);
@@ -661,7 +636,7 @@
         }
         
         .faq-question {
-            padding: 25px 30px;
+            padding: 20px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -677,24 +652,27 @@
         .faq-question h3 {
             color: var(--primary-color);
             margin-bottom: 0;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
+            flex: 1;
+            padding-right: 15px;
         }
         
         .faq-toggle {
             color: var(--secondary-color);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: var(--transition);
+            flex-shrink: 0;
         }
         
         .faq-answer {
-            padding: 0 30px;
+            padding: 0 25px;
             max-height: 0;
             overflow: hidden;
             transition: var(--transition);
         }
         
         .faq-item.active .faq-answer {
-            padding: 0 30px 25px;
+            padding: 0 25px 20px;
             max-height: 500px;
         }
         
@@ -707,7 +685,7 @@
             background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
             color: white;
             text-align: center;
-            padding: 100px 0;
+            padding: 70px 0;
             position: relative;
             overflow: hidden;
         }
@@ -715,11 +693,11 @@
         .cta-section:before {
             content: '';
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            top: -100px;
-            right: -100px;
+            top: -50px;
+            right: -50px;
             border-radius: 50%;
         }
         
@@ -732,36 +710,37 @@
         
         .cta-content h2 {
             color: white;
-            margin-bottom: 30px;
-            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
         }
         
         .cta-content p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
             opacity: 0.9;
+            line-height: 1.6;
         }
         
         /* Footer */
         footer {
             background-color: var(--primary-dark);
             color: white;
-            padding: 80px 0 30px;
+            padding: 60px 0 25px;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            margin-bottom: 60px;
+            gap: 40px;
+            margin-bottom: 50px;
         }
         
         .footer-column h3 {
             color: white;
-            margin-bottom: 30px;
-            font-size: 1.5rem;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
         }
         
         .footer-column h3:after {
@@ -777,7 +756,7 @@
         
         .footer-links li {
             list-style: none;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .footer-links a {
@@ -787,6 +766,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            font-size: 0.95rem;
         }
         
         .footer-links a:hover {
@@ -800,34 +780,40 @@
         
         .contact-info li {
             list-style: none;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: flex;
             align-items: flex-start;
         }
         
         .contact-info i {
-            margin-right: 15px;
+            margin-right: 12px;
             color: var(--secondary-color);
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .contact-info span {
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
         
         .social-icons {
             display: flex;
-            gap: 15px;
-            margin-top: 25px;
+            gap: 12px;
+            margin-top: 20px;
         }
         
         .social-icons a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background-color: rgba(255, 255, 255, 0.08);
             border-radius: 10px;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: var(--transition);
         }
         
@@ -838,49 +824,24 @@
         
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 25px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #aaa;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
         
-        /* Responsive Design */
+        /* Responsive Design - Mobile First */
         @media (max-width: 1200px) {
-            .process-timeline::before {
-                left: 40px;
+            .container {
+                padding: 0 20px;
             }
             
-            .timeline-item {
-                flex-direction: row !important;
+            .section-title h2 {
+                font-size: 2.5rem;
             }
             
-            .timeline-content {
-                margin-left: 100px !important;
-                margin-right: 0 !important;
-                text-align: left !important;
-            }
-            
-            .timeline-item:nth-child(odd) .timeline-icon,
-            .timeline-item:nth-child(even) .timeline-icon {
-                left: -40px;
-                right: auto;
-            }
-            
-            .timeline-item:nth-child(odd) .timeline-number,
-            .timeline-item:nth-child(even) .timeline-number {
-                left: 20px;
-                right: auto;
-            }
-            
-            .timeline-item:nth-child(odd) .timeline-features li,
-            .timeline-item:nth-child(even) .timeline-features li {
-                flex-direction: row;
-            }
-            
-            .timeline-item:nth-child(odd) .timeline-features li i,
-            .timeline-item:nth-child(even) .timeline-features li i {
-                margin-right: 15px;
-                margin-left: 0;
+            .page-hero h1 {
+                font-size: 2.5rem;
             }
         }
         
@@ -889,26 +850,62 @@
                 --section-spacing: 80px;
             }
             
+            .section-title {
+                margin-bottom: 50px;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+            
             .page-hero h1 {
-                font-size: 3rem;
+                font-size: 2.2rem;
             }
             
             .page-hero p {
                 font-size: 1.1rem;
             }
             
-            .section-title h2 {
-                font-size: 2.3rem;
+            .process-cards {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
+            }
+            
+            .case-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
             
             .cta-content h2 {
-                font-size: 2.3rem;
+                font-size: 2rem;
+            }
+            
+            .logo-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
+            }
+            
+            .logo-text span {
+                font-size: 1.1rem;
             }
         }
         
         @media (max-width: 768px) {
+            :root {
+                --section-spacing: 60px;
+            }
+            
             .header-container {
-                padding: 15px;
+                padding: 10px 15px;
             }
             
             .mobile-menu-btn {
@@ -917,13 +914,13 @@
             
             nav ul {
                 position: fixed;
-                top: 100px;
+                top: 80px;
                 left: -100%;
                 width: 100%;
                 flex-direction: column;
                 background-color: white;
                 box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-                padding: 30px;
+                padding: 25px;
                 transition: var(--transition);
                 z-index: 999;
                 border-radius: 0 0 20px 20px;
@@ -934,78 +931,181 @@
             }
             
             nav ul li {
-                margin: 0 0 25px 0;
+                margin: 0 0 20px 0;
+            }
+            
+            nav ul li a.btn {
+                display: inline-flex;
+                width: auto;
+                margin-top: 10px;
             }
             
             .page-hero {
-                padding: 180px 0 100px;
-                margin-top: 90px;
-                background-attachment: scroll;
+                padding: 120px 0 60px;
+                margin-top: 60px;
             }
             
             .page-hero h1 {
-                font-size: 2.3rem;
+                font-size: 1.8rem;
+                padding: 0 10px;
+            }
+            
+            .page-hero p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .breadcrumb {
+                font-size: 0.85rem;
+                margin-bottom: 20px;
             }
             
             .process-timeline::before {
-                left: 30px;
+                left: 25px;
             }
             
             .timeline-content {
-                margin-left: 80px !important;
-                padding: 30px;
+                margin-left: 70px;
+                padding: 25px;
             }
             
             .timeline-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                left: -25px;
             }
             
-            .timeline-item:nth-child(odd) .timeline-icon,
-            .timeline-item:nth-child(even) .timeline-icon {
-                left: -30px;
+            .timeline-number {
+                font-size: 2.5rem;
+                top: 10px;
+                right: 15px;
+            }
+            
+            .timeline-content h3 {
+                font-size: 1.3rem;
+                padding-right: 40px;
+            }
+            
+            .timeline-features li span {
+                font-size: 0.9rem;
             }
             
             .section-title h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
-            .logo-icon {
-                width: 70px;
-                height: 70px;
-                font-size: 2.5rem;
-            }
-            
-            .logo-text {
-                font-size: 2rem;
-            }
-            
-            .logo-text span {
-                font-size: 1.4rem;
-            }
-            
-            .case-grid,
-            .process-cards {
+            .process-cards,
+            .case-grid {
                 grid-template-columns: 1fr;
             }
             
+            .process-card {
+                padding: 30px 25px;
+            }
+            
+            .process-card-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+            }
+            
+            .process-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .case-img {
+                height: 180px;
+            }
+            
+            .case-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .faq-question h3 {
+                font-size: 1rem;
+            }
+            
+            .faq-question {
+                padding: 18px 20px;
+            }
+            
+            .faq-answer {
+                padding: 0 20px;
+                font-size: 0.95rem;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 0 20px 18px;
+            }
+            
+            .cta-section {
+                padding: 50px 0;
+            }
+            
             .cta-content h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                padding: 0 10px;
+            }
+            
+            .cta-content p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            
+            .copyright {
+                padding-top: 20px;
+                font-size: 0.8rem;
             }
         }
         
         @media (max-width: 576px) {
+            html {
+                font-size: 14px;
+            }
+            
             :root {
-                --section-spacing: 60px;
+                --section-spacing: 50px;
+            }
+            
+            .container {
+                padding: 0 12px;
+            }
+            
+            .page-hero {
+                padding: 100px 0 50px;
+                margin-top: 55px;
             }
             
             .page-hero h1 {
-                font-size: 1.9rem;
+                font-size: 1.6rem;
+            }
+            
+            .page-hero p {
+                font-size: 0.95rem;
+            }
+            
+            .breadcrumb {
+                font-size: 0.8rem;
+            }
+            
+            .section-title {
+                margin-bottom: 40px;
             }
             
             .section-title h2 {
-                font-size: 1.7rem;
+                font-size: 1.6rem;
+                padding-bottom: 15px;
+            }
+            
+            .section-title p {
+                font-size: 0.9rem;
+                margin-top: 15px;
             }
             
             .btn {
@@ -1014,38 +1114,144 @@
             }
             
             .logo-icon {
-                width: 65px;
-                height: 65px;
-                font-size: 2.2rem;
-                margin-right: 12px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                margin-right: 10px;
             }
             
             .logo-text {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
             
             .logo-text span {
-                font-size: 1.2rem;
+                font-size: 0.95rem;
+            }
+            
+            .process-timeline::before {
+                left: 20px;
             }
             
             .timeline-content {
-                padding: 25px;
+                margin-left: 60px;
+                padding: 20px;
             }
             
             .timeline-icon {
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+                left: -20px;
+            }
+            
+            .timeline-number {
+                font-size: 2rem;
+                top: 8px;
+                right: 10px;
+            }
+            
+            .timeline-content h3 {
+                font-size: 1.2rem;
+            }
+            
+            .timeline-features li {
+                margin-bottom: 8px;
+            }
+            
+            .timeline-features li i {
+                font-size: 0.8rem;
+                margin-right: 8px;
+            }
+            
+            .timeline-features li span {
+                font-size: 0.85rem;
+            }
+            
+            .process-card {
+                padding: 25px 20px;
+            }
+            
+            .process-card-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            
+            .process-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .case-img {
+                height: 160px;
+            }
+            
+            .case-content {
+                padding: 20px;
+            }
+            
+            .case-content h3 {
+                font-size: 1.2rem;
+            }
+            
+            .case-content p {
+                font-size: 0.9rem;
+            }
+            
+            .case-stat h4 {
                 font-size: 1.3rem;
             }
             
+            .case-stat p {
+                font-size: 0.75rem;
+            }
+            
+            .faq-question h3 {
+                font-size: 0.95rem;
+            }
+            
+            .faq-question {
+                padding: 15px 18px;
+            }
+            
+            .cta-section {
+                padding: 40px 0;
+            }
+            
             .cta-content h2 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
+            }
+            
+            .cta-content p {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+            
+            .cta-section .btn {
+                padding: 16px 30px;
+                font-size: 1rem;
+            }
+            
+            .footer-column h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+            
+            .footer-links a,
+            .contact-info span {
+                font-size: 0.9rem;
+            }
+            
+            .social-icons a {
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
             }
         }
         
         @media (max-width: 400px) {
             .page-hero h1 {
-                font-size: 1.7rem;
+                font-size: 1.4rem;
             }
             
             .process-timeline::before {
@@ -1053,11 +1259,31 @@
             }
             
             .timeline-content {
-                margin-left: 0 !important;
+                margin-left: 0;
+                border-left: 3px solid var(--secondary-color);
             }
             
             .timeline-icon {
                 display: none;
+            }
+            
+            .timeline-number {
+                font-size: 1.8rem;
+            }
+            
+            .case-stats {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .case-stat {
+                width: 100%;
+            }
+            
+            .case-stat:not(:last-child) {
+                border-bottom: 1px solid var(--light-gray);
+                padding-bottom: 15px;
             }
         }
     </style>
@@ -1077,11 +1303,11 @@
             
             <nav>
                 <ul>
-                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html" >About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="process.html" class="active">Our Process</a></li>
-                    <li><a href="index.html"  class="btn btn-accent" >Contact Us <i class="fas fa-arrow-right"></i></a></li>
+                    <li><a href="index.html" class="btn btn-accent">Contact Us <i class="fas fa-arrow-right"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -1113,19 +1339,18 @@
                     <div class="timeline-content">
                         <div class="timeline-number">01</div>
                         <h3>Discovery & Strategy Development</h3>
-                        <p>We begin by understanding your business objectives, target audience, and desired outcomes to create a comprehensive event strategy that aligns with your organizational goals.</p>
+                        <p>We begin by understanding your business objectives, target audience, and desired outcomes to create a comprehensive event strategy.</p>
                         
                         <div class="timeline-features">
                             <ul>
-                                <li><i class="fas fa-check"></i> <span><strong>Initial Consultation:</strong> Deep dive into your objectives and requirements</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Audience Analysis:</strong> Understanding attendee demographics and preferences</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Goal Setting:</strong> Defining measurable event success metrics</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Budget Planning:</strong> Creating a transparent financial framework</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Timeline Development:</strong> Establishing key milestones and deadlines</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Initial Consultation:</strong> Deep dive into objectives</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Audience Analysis:</strong> Understanding attendee needs</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Goal Setting:</strong> Defining measurable success metrics</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Budget Planning:</strong> Transparent financial framework</span></li>
                             </ul>
                         </div>
                         
-                        <div style="margin-top: 30px;">
+                        <div style="margin-top: 20px;">
                             <span class="case-tag">Duration: 2-4 Weeks</span>
                         </div>
                     </div>
@@ -1139,19 +1364,18 @@
                     <div class="timeline-content">
                         <div class="timeline-number">02</div>
                         <h3>Concept & Design Phase</h3>
-                        <p>Our creative team develops a unique event concept tailored to your specific requirements, audience, and brand identity, ensuring a memorable and impactful experience.</p>
+                        <p>Our creative team develops a unique event concept tailored to your specific requirements, audience, and brand identity.</p>
                         
                         <div class="timeline-features">
                             <ul>
-                                <li><i class="fas fa-check"></i> <span><strong>Creative Concepting:</strong> Developing the event theme and narrative</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Brand Integration:</strong> Seamlessly incorporating your brand identity</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Venue Selection:</strong> Sourcing and securing the perfect location</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Program Design:</strong> Creating engaging agendas and content flow</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Vendor Coordination:</strong> Selecting and contracting premium suppliers</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Creative Concepting:</strong> Developing theme and narrative</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Brand Integration:</strong> Incorporating brand identity</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Venue Selection:</strong> Securing perfect location</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Program Design:</strong> Creating engaging agendas</span></li>
                             </ul>
                         </div>
                         
-                        <div style="margin-top: 30px;">
+                        <div style="margin-top: 20px;">
                             <span class="case-tag">Duration: 3-6 Weeks</span>
                         </div>
                     </div>
@@ -1165,19 +1389,18 @@
                     <div class="timeline-content">
                         <div class="timeline-number">03</div>
                         <h3>Planning & Coordination</h3>
-                        <p>Meticulous planning of every detail, from logistics and technology setup to speaker coordination and attendee management, ensuring seamless execution.</p>
+                        <p>Meticulous planning of every detail, from logistics and technology setup to speaker coordination and attendee management.</p>
                         
                         <div class="timeline-features">
                             <ul>
-                                <li><i class="fas fa-check"></i> <span><strong>Detailed Planning:</strong> Comprehensive checklist development</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Logistics Management:</strong> Transportation, accommodation, and setup</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Technology Setup:</strong> Audio-visual, registration, and engagement tools</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Speaker Management:</strong> Sourcing, contracting, and briefing presenters</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Marketing & Promotion:</strong> Driving attendance and engagement</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Detailed Planning:</strong> Comprehensive checklist</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Logistics Management:</strong> Transportation and setup</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Technology Setup:</strong> Audio-visual and engagement tools</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Speaker Management:</strong> Sourcing and briefing</span></li>
                             </ul>
                         </div>
                         
-                        <div style="margin-top: 30px;">
+                        <div style="margin-top: 20px;">
                             <span class="case-tag">Duration: 4-12 Weeks</span>
                         </div>
                     </div>
@@ -1191,19 +1414,18 @@
                     <div class="timeline-content">
                         <div class="timeline-number">04</div>
                         <h3>Execution & Post-Event Analysis</h3>
-                        <p>On-site management ensuring flawless execution, followed by comprehensive analysis to measure ROI and gather insights for future improvements.</p>
+                        <p>On-site management ensuring flawless execution, followed by comprehensive analysis to measure ROI and gather insights.</p>
                         
                         <div class="timeline-features">
                             <ul>
-                                <li><i class="fas fa-check"></i> <span><strong>On-Site Management:</strong> Real-time coordination and problem-solving</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Attendant Experience:</strong> Ensuring seamless attendee journey</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Real-time Adjustments:</strong> Adapting to changing circumstances</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>ROI Measurement:</strong> Analyzing event success against objectives</span></li>
-                                <li><i class="fas fa-check"></i> <span><strong>Feedback Collection:</strong> Gathering insights for continuous improvement</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>On-Site Management:</strong> Real-time coordination</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Attendant Experience:</strong> Seamless attendee journey</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>Real-time Adjustments:</strong> Adapting to changes</span></li>
+                                <li><i class="fas fa-check"></i> <span><strong>ROI Measurement:</strong> Analyzing event success</span></li>
                             </ul>
                         </div>
                         
-                        <div style="margin-top: 30px;">
+                        <div style="margin-top: 20px;">
                             <span class="case-tag">Duration: 2-4 Weeks Post-Event</span>
                         </div>
                     </div>
@@ -1229,7 +1451,7 @@
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>Strategic Alignment</h3>
-                    <p>Every event is designed with clear business objectives and measurable outcomes in mind, ensuring alignment with your broader organizational goals.</p>
+                    <p>Every event is designed with clear business objectives and measurable outcomes in mind.</p>
                 </div>
                 
                 <div class="process-card">
@@ -1237,7 +1459,7 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Collaborative Approach</h3>
-                    <p>We work as an extension of your team, maintaining open communication and collaboration throughout the entire process.</p>
+                    <p>We work as an extension of your team, maintaining open communication throughout.</p>
                 </div>
                 
                 <div class="process-card">
@@ -1245,7 +1467,7 @@
                         <i class="fas fa-chart-pie"></i>
                     </div>
                     <h3>Data-Driven Decisions</h3>
-                    <p>We leverage analytics and insights to make informed decisions, optimize experiences, and maximize ROI.</p>
+                    <p>We leverage analytics to make informed decisions, optimize experiences, and maximize ROI.</p>
                 </div>
                 
                 <div class="process-card">
@@ -1261,7 +1483,7 @@
                         <i class="fas fa-sync-alt"></i>
                     </div>
                     <h3>Continuous Improvement</h3>
-                    <p>We learn from every event, implementing feedback and insights to continuously enhance our processes and your results.</p>
+                    <p>We learn from every event, implementing feedback to continuously enhance results.</p>
                 </div>
                 
                 <div class="process-card">
@@ -1269,7 +1491,7 @@
                         <i class="fas fa-leaf"></i>
                     </div>
                     <h3>Sustainability Focus</h3>
-                    <p>We incorporate eco-friendly practices and sustainable solutions into every aspect of event planning and execution.</p>
+                    <p>We incorporate eco-friendly practices into every aspect of event planning and execution.</p>
                 </div>
             </div>
         </div>
@@ -1291,7 +1513,7 @@
                     <div class="case-content">
                         <span class="case-tag">Technology Conference</span>
                         <h3>Kosovo Tech Summit 2023</h3>
-                        <p>A 3-day technology conference bringing together 500+ industry leaders, startups, and investors from across the Balkan region.</p>
+                        <p>A 3-day technology conference bringing together 500+ industry leaders from across the Balkan region.</p>
                         
                         <div class="case-stats">
                             <div class="case-stat">
@@ -1317,7 +1539,7 @@
                     <div class="case-content">
                         <span class="case-tag">Executive Networking</span>
                         <h3>Balkan Business Leaders Forum</h3>
-                        <p>An exclusive networking event connecting 150+ C-level executives from Kosovo, Albania, North Macedonia, and Montenegro.</p>
+                        <p>An exclusive networking event connecting 150+ C-level executives from four countries.</p>
                         
                         <div class="case-stats">
                             <div class="case-stat">
@@ -1343,7 +1565,7 @@
                     <div class="case-content">
                         <span class="case-tag">Product Launch</span>
                         <h3>Innovate Kosovo Product Reveal</h3>
-                        <p>A multi-sensory product launch event for a leading tech company's new innovation platform, reaching 300+ media and industry influencers.</p>
+                        <p>A multi-sensory product launch event for a leading tech company's new innovation platform.</p>
                         
                         <div class="case-stats">
                             <div class="case-stat">
@@ -1386,7 +1608,6 @@
                             <li>Medium conferences (100-300 attendees): 3-6 months</li>
                             <li>Large-scale events (300+ attendees): 6-12 months</li>
                         </ul>
-                        <p>We begin with a discovery phase to establish the exact timeline based on your specific requirements.</p>
                     </div>
                 </div>
                 
@@ -1398,11 +1619,11 @@
                     <div class="faq-answer">
                         <p>We employ a transparent and strategic approach to budget management:</p>
                         <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li><strong>Comprehensive Budget Planning:</strong> We create detailed budget breakdowns during the discovery phase</li>
-                            <li><strong>Vendor Negotiation:</strong> We leverage our network to secure competitive pricing</li>
-                            <li><strong>Regular Updates:</strong> You receive monthly budget reports and alerts for any variances</li>
-                            <li><strong>Contingency Planning:</strong> We allocate 10-15% of the budget for unexpected expenses</li>
-                            <li><strong>ROI Focus:</strong> Every expense is evaluated against its potential return</li>
+                            <li>Comprehensive Budget Planning during discovery phase</li>
+                            <li>Vendor Negotiation for competitive pricing</li>
+                            <li>Regular Updates with monthly budget reports</li>
+                            <li>Contingency Planning for unexpected expenses</li>
+                            <li>ROI Focus for every expense</li>
                         </ul>
                     </div>
                 </div>
@@ -1413,15 +1634,14 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>We use a comprehensive measurement framework that includes both quantitative and qualitative metrics:</p>
+                        <p>We use a comprehensive measurement framework that includes:</p>
                         <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li><strong>Pre-defined KPIs:</strong> Established during the strategy phase</li>
-                            <li><strong>Attendee Feedback:</strong> Post-event surveys and interviews</li>
-                            <li><strong>Business Outcomes:</strong> Lead generation, partnerships formed, deals closed</li>
-                            <li><strong>Engagement Metrics:</strong> Session attendance, networking connections, app usage</li>
-                            <li><strong>Media & Social Impact:</strong> Coverage, reach, and sentiment analysis</li>
+                            <li>Pre-defined KPIs established during strategy phase</li>
+                            <li>Attendee Feedback through surveys and interviews</li>
+                            <li>Business Outcomes like lead generation and deals closed</li>
+                            <li>Engagement Metrics including session attendance</li>
+                            <li>Media & Social Impact analysis</li>
                         </ul>
-                        <p>We provide a detailed post-event report with actionable insights for future improvement.</p>
                     </div>
                 </div>
                 
@@ -1431,32 +1651,14 @@
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p>We leverage a suite of industry-leading technologies to enhance every aspect of event management:</p>
+                        <p>We leverage industry-leading technologies:</p>
                         <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li><strong>Registration & Ticketing:</strong> Custom-built platforms and integration with leading providers</li>
-                            <li><strong>Event Apps:</strong> Custom mobile applications for agenda, networking, and engagement</li>
-                            <li><strong>Hybrid Event Technology:</strong> Professional streaming, virtual stages, and interactive features</li>
-                            <li><strong>Networking Tools:</strong> AI-powered matchmaking and connection facilitation</li>
-                            <li><strong>Analytics Platforms:</strong> Real-time dashboards and post-event analysis tools</li>
+                            <li>Registration & Ticketing platforms</li>
+                            <li>Custom Event Apps for agenda and networking</li>
+                            <li>Hybrid Event Technology for streaming</li>
+                            <li>AI-powered Networking Tools</li>
+                            <li>Analytics Platforms for real-time insights</li>
                         </ul>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How do you handle last-minute changes or emergencies?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our comprehensive risk management and contingency planning ensures we're prepared for any scenario:</p>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li><strong>Dedicated Crisis Team:</strong> Experienced professionals on standby throughout the event</li>
-                            <li><strong>Backup Plans:</strong> Alternative venues, speakers, and suppliers identified in advance</li>
-                            <li><strong>Real-time Communication:</strong> Rapid response protocols and communication channels</li>
-                            <li><strong>Insurance Coverage:</strong> Comprehensive event insurance for all contingencies</li>
-                            <li><strong>Vendor Relationships:</strong> Strong partnerships that enable quick solutions</li>
-                        </ul>
-                        <p>We've successfully managed everything from weather disruptions to speaker cancellations with minimal impact.</p>
                     </div>
                 </div>
             </div>
@@ -1469,7 +1671,7 @@
             <div class="cta-content">
                 <h2>Ready to Experience Our Proven Process?</h2>
                 <p>Let us transform your next corporate event into a strategic success story. Our systematic approach ensures exceptional results every time.</p>
-                <a href="#contact" class="btn btn-accent" style="font-size: 1.1rem; padding: 18px 45px;">Start Your Event Journey <i class="fas fa-calendar-check"></i></a>
+                <a href="index.html" class="btn btn-accent" style="font-size: 1.1rem; padding: 18px 45px;">Start Your Event Journey <i class="fas fa-calendar-check"></i></a>
             </div>
         </div>
     </section>
@@ -1482,10 +1684,10 @@
                     <h3>EMK Event Management</h3>
                     <div style="margin-bottom: 25px;">
                         <div class="logo" style="margin-bottom: 20px;">
-                            <div class="logo-icon" style="width: 60px; height: 60px; font-size: 1.8rem; margin-right: 12px;">EMK</div>
-                            <div class="logo-text" style="font-size: 1.6rem; color: white;">Event Management<span style="color: #ddd;">Kosovo</span></div>
+                            <div class="logo-icon" style="width: 50px; height: 50px; font-size: 1.5rem; margin-right: 12px;">EMK</div>
+                            <div class="logo-text" style="font-size: 1.5rem; color: white;">Event Management<span style="color: #ddd;">Kosovo</span></div>
                         </div>
-                        <p style="color: #bbb; margin-top: 15px;">Your premier partner for strategic corporate events and executive networking in Kosovo and the Balkan region.</p>
+                        <p style="color: #bbb; margin-top: 15px; font-size: 0.9rem;">Your premier partner for strategic corporate events and executive networking in Kosovo.</p>
                     </div>
                     
                     <div class="social-icons">
@@ -1510,10 +1712,10 @@
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> <span>Prishtina, Kosovo<br>Business District, Floor 5</span></li>
-                        <li><i class="fas fa-phone"></i> <span>+383 44 123 456<br>+383 38 654 321</span></li>
-                        <li><i class="fas fa-envelope"></i> <span>101webstudio@gmail.com<br>contact@emk-kosovo.com</span></li>
-                        <li><i class="fas fa-clock"></i> <span>Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 2:00 PM</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Prishtina, Kosovo</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+383 49 620 196<br>+383 49 222 951</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>contact@emk-kosovo.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon-Fri: 9:00 AM - 6:00 PM</span></li>
                     </ul>
                 </div>
             </div>
@@ -1560,7 +1762,7 @@
                     const targetElement = document.querySelector(targetId);
                     if(targetElement) {
                         window.scrollTo({
-                            top: targetElement.offsetTop - 100,
+                            top: targetElement.offsetTop - 80,
                             behavior: 'smooth'
                         });
                     }
@@ -1571,7 +1773,7 @@
         // Header background on scroll
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if(window.scrollY > 50) {
+            if(window.scrollY > 30) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
@@ -1602,15 +1804,15 @@
                     setTimeout(() => {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
-                    }, index * 300);
+                    }, index * 200);
                 }
             });
         }, { threshold: 0.1 });
         
         document.querySelectorAll('.timeline-item').forEach(item => {
             item.style.opacity = '0';
-            item.style.transform = 'translateY(50px)';
-            item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             timelineObserver.observe(item);
         });
         
@@ -1621,15 +1823,15 @@
                     setTimeout(() => {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
-                    }, index * 200);
+                    }, index * 150);
                 }
             });
         }, { threshold: 0.1 });
         
         document.querySelectorAll('.process-card').forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             processObserver.observe(card);
         });
         
@@ -1640,15 +1842,15 @@
                     setTimeout(() => {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
-                    }, index * 200);
+                    }, index * 150);
                 }
             });
         }, { threshold: 0.1 });
         
         document.querySelectorAll('.case-card').forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             caseObserver.observe(card);
         });
         
@@ -1662,7 +1864,4 @@
         });
     </script>
 </body>
-
 </html>
-
-
