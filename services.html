@@ -365,73 +365,118 @@
         }
         
         /* Service Detail */
-        .service-detail {
-            margin-bottom: 60px;
-        }
-        
-        .service-detail-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .service-detail-img {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-hover);
-            order: 1;
-        }
-        
-        .service-detail-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: var(--transition);
-        }
-        
-        .service-detail-img:hover img {
-            transform: scale(1.05);
-        }
-        
-        .service-detail-text {
-            order: 2;
-        }
-        
-        .service-detail-text h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .service-features {
-            margin: 25px 0;
-        }
-        
-        .service-features li {
-            list-style: none;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .service-features li i {
-            color: var(--accent-color);
-            font-size: 1.1rem;
-            margin-right: 12px;
-            margin-top: 3px;
-            flex-shrink: 0;
-        }
-        
-        .service-features li strong {
-            color: var(--primary-color);
-        }
-        
-        .service-features li span {
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
+     /* Service Detail - Updated Image Styles */
+.service-detail {
+    margin-bottom: 60px;
+}
+
+.service-detail-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.service-detail-img {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+    height: 450px; /* Fixed height for consistency */
+    width: 100%; /* Full width of grid column */
+}
+
+.service-detail-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: var(--transition);
+    object-fit: cover; /* Ensures image fills container without distortion */
+    object-position: center;
+}
+
+.service-detail-img:hover img {
+    transform: scale(1.05);
+}
+
+.service-detail-text {
+    padding: 10px 0;
+}
+
+.service-detail-text h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Reorder for alternating layout */
+.service-detail:nth-child(odd) .service-detail-content {
+    direction: ltr;
+}
+
+.service-detail:nth-child(even) .service-detail-content {
+    direction: rtl;
+}
+
+.service-detail:nth-child(even) .service-detail-text {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Responsive adjustments for desktop images */
+@media (min-width: 993px) {
+    .service-detail-img {
+        max-width: 100%;
+        height: 500px; /* Slightly larger on bigger screens */
+    }
+    
+    .service-detail-content {
+        gap: 70px; /* More space between image and text on desktop */
+    }
+}
+
+@media (max-width: 992px) {
+    .service-detail-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .service-detail-img {
+        height: 400px;
+        order: 1;
+    }
+    
+    .service-detail-text {
+        order: 2;
+        padding: 0;
+    }
+    
+    /* Reset the alternating layout on mobile */
+    .service-detail:nth-child(odd) .service-detail-content,
+    .service-detail:nth-child(even) .service-detail-content {
+        direction: ltr;
+    }
+    
+    .service-detail:nth-child(even) .service-detail-text {
+        direction: ltr;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-detail-img {
+        height: 350px;
+    }
+    
+    .service-detail-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-detail-img {
+        height: 280px;
+    }
+}
         
         /* Services Grid */
         .services-grid {
@@ -1366,3 +1411,4 @@
     </script>
 </body>
 </html>
+
