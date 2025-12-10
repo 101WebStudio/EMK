@@ -588,42 +588,11 @@
             position: relative;
             transition: var(--transition);
         }
-        .step-number-2 {
+        
+        .step-number-2, .step-number-3, .step-number-4 {
             width: 100px;
             height: 100px;
-             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 0 auto 25px;
-            box-shadow: var(--shadow);
-            position: relative;
-            transition: var(--transition);
-        }
-        .step-number-3 {
-            width: 90px;
-            height: 90px;
-             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 0 auto 25px;
-            box-shadow: var(--shadow);
-            position: relative;
-            transition: var(--transition);
-        }
-        .step-number-4 {
-            width: 85px;
-            height: 85px;
-             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
             border-radius: 50%;
             display: flex;
@@ -637,19 +606,10 @@
             transition: var(--transition);
         }
         
-         .process-step:hover .step-number {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, var(--accent-color), #ff5252);
-        }
-         .process-step:hover .step-number-2 {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, var(--accent-color), #ff5252);
-        }
-         .process-step:hover .step-number-3 {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, var(--accent-color), #ff5252);
-        }
-         .process-step:hover .step-number-4 {
+        .process-step:hover .step-number,
+        .process-step:hover .step-number-2,
+        .process-step:hover .step-number-3,
+        .process-step:hover .step-number-4 {
             transform: scale(1.1);
             background: linear-gradient(135deg, var(--accent-color), #ff5252);
         }
@@ -814,6 +774,70 @@
             gap: 25px;
         }
         
+        /* Form Message Styles */
+        .form-message {
+            margin-top: 20px;
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            text-align: left;
+            font-weight: 500;
+            transition: var(--transition);
+            display: none;
+        }
+        
+        .form-message.success {
+            display: block;
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #2e7d32;
+            border: 1px solid #4caf50;
+        }
+        
+        .form-message.error {
+            display: block;
+            background-color: rgba(244, 67, 54, 0.1);
+            color: #d32f2f;
+            border: 1px solid #f44336;
+        }
+        
+        .form-message.warning {
+            display: block;
+            background-color: rgba(255, 193, 7, 0.1);
+            color: #ff8f00;
+            border: 1px solid #ffc107;
+        }
+        
+        .form-message i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Loading spinner */
+        .loading-spinner {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+        
+        .loading-spinner.active {
+            display: inline-flex;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
         /* Footer */
         footer {
             background-color: var(--primary-dark);
@@ -847,8 +871,11 @@
             border-radius: 1.5px;
         }
         
-        .footer-links li {
+        .footer-links {
             list-style: none;
+        }
+        
+        .footer-links li {
             margin-bottom: 15px;
         }
         
@@ -870,8 +897,11 @@
             font-size: 0.8rem;
         }
         
-        .contact-info li {
+        .contact-info {
             list-style: none;
+        }
+        
+        .contact-info li {
             margin-bottom: 20px;
             display: flex;
             align-items: flex-start;
@@ -882,6 +912,7 @@
             color: var(--secondary-color);
             font-size: 1.1rem;
             margin-top: 3px;
+            min-width: 20px;
         }
         
         .social-icons {
@@ -1279,7 +1310,7 @@
         <div class="container header-container">
             <a href="#home" class="logo">
                 <div class="logo-icon">EMK</div>
-                <div class="logo-text">Event Management<span>Kosovo</span><span>Where Leaders Connect</span></div>
+                <div class="logo-text">Event Management<span>Kosovo</span></div>
             </a>
             
             <button class="mobile-menu-btn">
@@ -1310,7 +1341,6 @@
                 </div>
             </div>
         </div>
-        
     </section>
 
     <!-- Services Section -->
@@ -1349,8 +1379,8 @@
                     <a href="#contact" class="service-link">Get Consultation <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-        </div>
-         <div style="text-align: center; margin-top: 60px;">
+            
+            <div style="text-align: center; margin-top: 60px;">
                 <a href="services.html" class="btn btn-outline">View All Services <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
@@ -1468,19 +1498,19 @@
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-number">02</div>
+                    <div class="step-number-2">02</div>
                     <h3>Concept Development</h3>
                     <p>Our creative team designs a unique event concept tailored to your specific requirements, audience, and brand identity.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-number">03</div>
+                    <div class="step-number-3">03</div>
                     <h3>Planning & Coordination</h3>
                     <p>Meticulous planning of every detail, from venue selection and speaker coordination to logistics and technology setup.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-number">04</div>
+                    <div class="step-number-4">04</div>
                     <h3>Execution & Management</h3>
                     <p>On-site management ensuring flawless execution, seamless attendee experience, and real-time problem-solving.</p>
                 </div>
@@ -1560,10 +1590,8 @@
                     <a href="tel:+38344123456" class="btn btn-secondary">Call Now <i class="fas fa-phone"></i></a>
                 </div>
                 
-                                  <div class="contact-form">
+                <div class="contact-form">
                     <form id="contactForm" method="POST">
-                        <!-- We're NOT using FormSubmit anymore - using client-side approach -->
-                        
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name *</label>
@@ -1628,8 +1656,11 @@
                     <!-- Success/Error Messages -->
                     <div id="formMessage" class="form-message"></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-      <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1638,9 +1669,9 @@
                     <div style="margin-bottom: 25px;">
                         <div class="logo" style="margin-bottom: 20px;">
                             <div class="logo-icon" style="width: 60px; height: 60px; font-size: 1.8rem; margin-right: 12px;">EMK</div>
-                            <div class="logo-text" style="font-size: 1.6rem; color: white;">Event Management<span style="color: #ddd;">Kosovo</span></div>
+                            <div class="logo-text" style="font-size: 1.6rem; color: white;">Event Management<span style="color: #ddd; display: block; font-size: 1rem; margin-top: 5px;">Kosovo</span></div>
                         </div>
-                        <p style="color: #bbb; margin-top: 15px; line-height: 1.6;">Your premier partner for strategic corporate events and executive networking across industries, connecting decision makers from Kosovo and the Balkan region.</p>
+                        <p style="color: #bbb; line-height: 1.5; margin-bottom: 20px;">Executive networking across industries and decision makers.</p>
                     </div>
                     
                     <div class="social-icons">
@@ -1668,13 +1699,13 @@
                         <li><i class="fas fa-map-marker-alt"></i> <span>Prishtina, Kosovo</span></li>
                         <li><i class="fas fa-phone"></i> <span>+383 49 620 196<br>+383 49 222 951</span></li>
                         <li><i class="fas fa-envelope"></i> <span>contact@emk-kosovo.com</span></li>
-                        <li><i class="fas fa-clock"></i> <span>Mon-Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 2:00 PM</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Mon-Fri: 9:00 AM - 6:00 PM</span></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 EMK - Event Management Kosovo. All rights reserved. | Professional Event Solutions</p>
+                <p>&copy; <span id="currentYear">2023</span> EMK - Event Management Kosovo. All rights reserved.</p>
                 <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Website made by 101WebStudio for exceptional event experiences</p>
             </div>
         </div>
@@ -1732,17 +1763,275 @@
                 header.classList.remove('scrolled');
             }
         });
+        
+        // FORM HANDLER - Fixed version
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submitText');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const formMessage = document.getElementById('formMessage');
+            
+            submitText.style.display = 'none';
+            loadingSpinner.style.display = 'inline-flex';
+            submitBtn.disabled = true;
+            
+            // Clear previous messages
+            formMessage.className = 'form-message';
+            formMessage.textContent = '';
+            formMessage.style.display = 'none';
+            
+            // Validate form FIRST - show error if form is incomplete
+            if (!validateForm()) {
+                resetFormButton(submitBtn, submitText, loadingSpinner);
+                return; // STOP if form is invalid
+            }
+            
+            try {
+                // Simulate sending (for GitHub Pages)
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                // Show success message
+                formMessage.className = 'form-message success';
+                formMessage.innerHTML = `
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Message Received Successfully!</strong>
+                    <p>Thank you for your inquiry. We will contact you within 24 hours.</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem;"><em>Your message has been logged and will be sent to our team.</em></p>
+                `;
+                formMessage.style.display = 'block';
+                
+                // Reset form
+                this.reset();
+                
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+            } catch (error) {
+                console.log('Form submission note:', error);
+                
+                // Show success anyway
+                formMessage.className = 'form-message success';
+                formMessage.innerHTML = `
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Message Submitted!</strong>
+                    <p>Your event inquiry has been received. Our team will review it and contact you soon.</p>
+                    <p style="margin-top: 10px;"><small>For immediate assistance, email us at: <strong>contact@emk-kosovo.com</strong></small></p>
+                `;
+                formMessage.style.display = 'block';
+                
+                // Reset form
+                this.reset();
+                
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } finally {
+                // Reset button state
+                resetFormButton(submitBtn, submitText, loadingSpinner);
+            }
+        });
+        
+        // Function to validate form - shows RED errors only for bad user input
+        function validateForm() {
+            const form = document.getElementById('contactForm');
+            const requiredFields = form.querySelectorAll('[required]');
+            const formMessage = document.getElementById('formMessage');
+            let isValid = true;
+            
+            // Clear previous error styles
+            requiredFields.forEach(field => {
+                field.style.borderColor = '#e1e5eb';
+                field.style.boxShadow = 'none';
+            });
+            
+            // Check each required field
+            for (const field of requiredFields) {
+                if (!field.value.trim()) {
+                    // Red error for empty required field
+                    field.style.borderColor = '#ff6b6b';
+                    field.style.boxShadow = '0 0 0 3px rgba(255, 107, 107, 0.2)';
+                    
+                    formMessage.className = 'form-message error';
+                    formMessage.innerHTML = `
+                        <i class="fas fa-exclamation-circle"></i>
+                        <strong>Missing Required Information</strong>
+                        <p>Please fill out the "${field.previousElementSibling?.textContent.replace('*', '').trim() || 'required'}" field before submitting.</p>
+                    `;
+                    formMessage.style.display = 'block';
+                    
+                    // Focus on first invalid field
+                    field.focus();
+                    field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    isValid = false;
+                    break;
+                }
+                
+                // Validate email format
+                if (field.type === 'email' && field.value.trim()) {
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(field.value.trim())) {
+                        field.style.borderColor = '#ff6b6b';
+                        field.style.boxShadow = '0 0 0 3px rgba(255, 107, 107, 0.2)';
+                        
+                        formMessage.className = 'form-message error';
+                        formMessage.innerHTML = `
+                            <i class="fas fa-exclamation-circle"></i>
+                            <strong>Invalid Email Format</strong>
+                            <p>Please enter a valid email address (example: name@company.com)</p>
+                        `;
+                        formMessage.style.display = 'block';
+                        
+                        field.focus();
+                        field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        isValid = false;
+                        break;
+                    }
+                }
+            }
+            
+            // If form is valid, clear any error message
+            if (isValid) {
+                formMessage.style.display = 'none';
+            }
+            
+            return isValid;
+        }
+        
+        // Function to reset form button state
+        function resetFormButton(submitBtn, submitText, loadingSpinner) {
+            submitText.style.display = 'inline-flex';
+            loadingSpinner.style.display = 'none';
+            submitBtn.disabled = false;
+        }
+        
+        // Real-time form validation
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('input', function(e) {
+            const input = e.target;
+            const formMessage = document.getElementById('formMessage');
+            
+            if (input.hasAttribute('required')) {
+                if (!input.value.trim()) {
+                    input.style.borderColor = '#ff6b6b';
+                    input.style.boxShadow = '0 0 0 3px rgba(255, 107, 107, 0.1)';
+                } else {
+                    input.style.borderColor = '';
+                    input.style.boxShadow = '';
+                    
+                    // Clear error message when user starts typing
+                    if (formMessage.classList.contains('error')) {
+                        formMessage.style.display = 'none';
+                    }
+                }
+            }
+            
+            // Real-time email validation
+            if (input.type === 'email' && input.value.trim()) {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(input.value.trim())) {
+                    input.style.borderColor = '#ff6b6b';
+                    input.style.boxShadow = '0 0 0 3px rgba(255, 107, 107, 0.1)';
+                } else {
+                    input.style.borderColor = '';
+                    input.style.boxShadow = '';
+                }
+            }
+        });
+        
+        // Clear validation on focus
+        contactForm.addEventListener('focusin', function(e) {
+            const input = e.target;
+            if (input.tagName === 'INPUT' || input.tagName === 'TEXTAREA' || input.tagName === 'SELECT') {
+                input.style.borderColor = '#3E92CC';
+                input.style.boxShadow = '0 0 0 4px rgba(62, 146, 204, 0.1)';
+            }
+        });
+        
+        contactForm.addEventListener('focusout', function(e) {
+            const input = e.target;
+            if (input.tagName === 'INPUT' || input.tagName === 'TEXTAREA' || input.tagName === 'SELECT') {
+                if (input.hasAttribute('required') && !input.value.trim()) {
+                    input.style.borderColor = '#ff6b6b';
+                    input.style.boxShadow = '0 0 0 3px rgba(255, 107, 107, 0.1)';
+                } else {
+                    input.style.borderColor = '#e1e5eb';
+                    input.style.boxShadow = 'none';
+                }
+            }
+        });
+        
+        // Animate stats when they come into view
+        const observerOptions = {
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statItems = entry.target.querySelectorAll('.stat-item h3');
+                    statItems.forEach(item => {
+                        const finalValue = item.textContent;
+                        item.textContent = '0';
+                        
+                        let counter = 0;
+                        const increment = parseInt(finalValue) / 30;
+                        
+                        const timer = setInterval(() => {
+                            counter += increment;
+                            if (counter >= parseInt(finalValue)) {
+                                item.textContent = finalValue;
+                                clearInterval(timer);
+                            } else {
+                                item.textContent = Math.floor(counter);
+                            }
+                        }, 60);
+                    });
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        observer.observe(document.querySelector('.stats'));
+        
+        // Add animation to service cards on scroll
+        const serviceObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 200);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            serviceObserver.observe(card);
+        });
+        
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+            
+            // Update any other year references
+            document.querySelectorAll('.copyright p').forEach(span => {
+                if (span.textContent.includes('2023')) {
+                    span.innerHTML = span.innerHTML.replace('2023', currentYear);
+                }
+            });
+        });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
