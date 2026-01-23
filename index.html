@@ -543,98 +543,138 @@
         }
         
         /* Process Section */
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            margin-top: 60px;
-            flex-wrap: wrap;
-        }
-        
-        .process-steps:before {
-            content: '';
-            position: absolute;
-            width: 80%;
-            height: 3px;
-            background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
-            top: 60px;
-            left: 10%;
-            z-index: 1;
-            border-radius: 1.5px;
-        }
-        
-        .process-step {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            flex: 1;
-            min-width: 200px;
-            margin-bottom: 40px;
-        }
-        
-        .step-number {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 0 auto 25px;
-            box-shadow: var(--shadow);
-            position: relative;
-            transition: var(--transition);
-        }
-        
-        .step-number-2, .step-number-3, .step-number-4 {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 0 auto 25px;
-            box-shadow: var(--shadow);
-            position: relative;
-            transition: var(--transition);
-        }
-        
-        .process-step:hover .step-number,
-        .process-step:hover .step-number-2,
-        .process-step:hover .step-number-3,
-        .process-step:hover .step-number-4 {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, var(--accent-color), #ff5252);
-        }
-         
-        .step-number:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 2px dashed var(--secondary-color);
-            border-radius: 50%;
-            animation: rotate 20s linear infinite;
-        }
-        
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .process-step h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
+      /* Process Section - Rregulluar */
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.process-steps:before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+    top: 60px;
+    left: 10%;
+    z-index: 1;
+    border-radius: 1.5px;
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.step-number {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 auto 25px;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: var(--transition);
+}
+
+.step-number:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed var(--secondary-color);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.process-step:hover .step-number {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, var(--accent-color), #ff5252);
+}
+
+.process-step h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-step p {
+    color: var(--gray-color);
+    line-height: 1.6;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .process-steps:before {
+        width: 70%;
+        left: 15%;
+    }
+}
+
+@media (max-width: 992px) {
+    .process-steps:before {
+        display: none;
+    }
+    
+    .process-step {
+        min-width: 170px;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .process-step {
+        min-width: 100%;
+        margin-bottom: 0;
+    }
+    
+    .step-number {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .process-step h3 {
+        min-height: 60px;
+        font-size: 1.3rem;
+    }
+    
+    .step-number {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+}
         /* Stats Section */
         .stats {
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
@@ -1489,40 +1529,40 @@
     </section>
 
     <!-- Process Section -->
-    <section id="process">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Strategic Process</h2>
-                <p>A systematic approach to delivering exceptional events that drive results</p>
+  <section id="process">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Strategic Process</h2>
+            <p>A systematic approach to delivering exceptional events that drive results</p>
+        </div>
+        
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h3>Discovery & Strategy</h3>
+                <p>We begin by understanding your business objectives, target audience, and desired outcomes to create a strategic event blueprint.</p>
             </div>
             
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <h3>Discovery & Strategy</h3>
-                    <p>We begin by understanding your business objectives, target audience, and desired outcomes to create a strategic event blueprint.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number-2">02</div>
-                    <h3>Concept Development</h3>
-                    <p>Our creative team designs a unique event concept tailored to your specific requirements, audience, and brand identity.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number-3">03</div>
-                    <h3>Planning & Coordination</h3>
-                    <p>Meticulous planning of every detail, from venue selection and speaker coordination to logistics and technology setup.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number-4">04</div>
-                    <h3>Execution & Management</h3>
-                    <p>On-site management ensuring flawless execution, seamless attendee experience, and real-time problem-solving.</p>
-                </div>
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h3>Concept Development</h3>
+                <p>Our creative team designs a unique event concept tailored to your specific requirements, audience, and brand identity.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h3>Planning & Coordination</h3>
+                <p>Meticulous planning of every detail, from venue selection and speaker coordination to logistics and technology setup.</p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <h3>Execution & Management</h3>
+                <p>On-site management ensuring flawless execution, seamless attendee experience, and real-time problem-solving.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Stats Section -->
     <section class="stats">
@@ -2041,6 +2081,7 @@
     </script>
 </body>
 </html>
+
 
 
 
